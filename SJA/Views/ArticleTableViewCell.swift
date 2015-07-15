@@ -1,5 +1,5 @@
 //
-//  ContainerView.swift
+//  ArticleTableViewCell.swift
 //  SJA
 //
 //  Created by Rosalind Ellis on 7/15/15.
@@ -8,6 +8,8 @@
 
 import UIKit
 
-class ContainerView: UITableView {
+class ArticleTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var articleName: UILabel!
     
 }

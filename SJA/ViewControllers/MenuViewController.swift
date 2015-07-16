@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,15 +29,43 @@ extension MenuViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! TopicTableViewCell
-        
         let row = indexPath.row
-        cell.topicLabel.text = "Race"
+        // Hard code topics into menu
+        if row == 0 {
+            cell.topicLabel.text = "Class"
+        } else if row == 1 {
+            cell.topicLabel.text = "Crime"
+        } else if row == 2 {
+            cell.topicLabel.text = "Education"
+        } else if row == 3 {
+            cell.topicLabel.text = "Feminism"
+        } else if row == 4 {
+            cell.topicLabel.text = "Mental Illness"
+        } else if row == 5 {
+            cell.topicLabel.text = "Race"
+        } else if row == 6 {
+            cell.topicLabel.text = "Self Worth"
+        } else if row == 7 {
+            cell.topicLabel.text = "Sexism"
+        } else if row == 8 {
+            cell.topicLabel.text = "Spectrum"
+        }
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
 
+}
+
+extension MenuViewController: UITableViewDelegate {
+    
+//    //let source = ViewController()
+//    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let source = ViewController()
+//        source.menuContainer.hidden = true
+//    }
 }

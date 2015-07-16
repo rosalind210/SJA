@@ -45,6 +45,7 @@ extension TopicViewController: UITableViewDataSource {
         
         let row = indexPath.row
         cell.articleName.text = "8 Churches Burned"
+        cell.articleSource.text = "Feminista"
         
         return cell
     }

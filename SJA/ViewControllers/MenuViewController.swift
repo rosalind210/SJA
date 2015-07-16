@@ -27,6 +27,14 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: UITableViewDataSource {
     
+//    var source = ViewController()
+//    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let row = indexPath.row
+//        let source = ViewController()
+//        source.menuContainer.hidden = true
+//    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! TopicTableViewCell
         let row = indexPath.row
@@ -55,7 +63,7 @@ extension MenuViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 9
     }
 
 }

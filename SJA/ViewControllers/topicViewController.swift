@@ -19,6 +19,15 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Take out range of topic view controllers in between current and main
+        if let navigationController = navigationController {
+            var navControllers = navigationController.viewControllers
+            if navControllers.count > 2 {
+                navControllers.removeRange(1..<(navControllers.count - 1))
+                navigationController.viewControllers = navControllers
+            }
+        }
+        
         articleTableView.dataSource = self
         menuContainer.hidden = true
     }

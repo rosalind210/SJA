@@ -8,12 +8,18 @@
 
 import UIKit
 
+
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var viewName: String?
+    var Topics: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Topics = ["Class", "Crime", "Education", "Fenimism", "Mental Illness","Race", "Self-Worth", "Sexism", "Spectrum"]
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -27,43 +33,29 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: UITableViewDataSource {
     
-//    var source = ViewController()
-//    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let row = indexPath.row
-//        let source = ViewController()
-//        source.menuContainer.hidden = true
-//    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+        if viewName == "View Controller"{
+            viewName = "Topic"
+            var source = self.parentViewController as! ViewController
+            source.menuContainer.hidden = true
+            viewName = "Topic"
+        }
+
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! TopicTableViewCell
         let row = indexPath.row
-        // Hard code topics into menu
-        if row == 0 {
-            cell.topicLabel.text = "Class"
-        } else if row == 1 {
-            cell.topicLabel.text = "Crime"
-        } else if row == 2 {
-            cell.topicLabel.text = "Education"
-        } else if row == 3 {
-            cell.topicLabel.text = "Feminism"
-        } else if row == 4 {
-            cell.topicLabel.text = "Mental Illness"
-        } else if row == 5 {
-            cell.topicLabel.text = "Race"
-        } else if row == 6 {
-            cell.topicLabel.text = "Self Worth"
-        } else if row == 7 {
-            cell.topicLabel.text = "Sexism"
-        } else if row == 8 {
-            cell.topicLabel.text = "Spectrum"
-        }
-        
+        cell.topicLabel.text = Topics[row]
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return Topics.count
     }
 
 }

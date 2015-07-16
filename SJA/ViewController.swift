@@ -15,7 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var childs = self.childViewControllers
+        var child = childs[0] as! MenuViewController
+        child.viewName = "View Controller"
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        var childs = self.childViewControllers
+        var child = childs[0] as! MenuViewController
+        child.viewName = "View Controller"
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +41,7 @@ class ViewController: UIViewController {
             menuContainer!.hidden = true
         }
     }
+
 
 
 }

@@ -122,7 +122,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="topicLabel" destination="JuU-Yx-eA1" id="cE4-nN-ZcO"/>
-                                            <segue destination="Zif-8U-Hj9" kind="custom" id="3d2-Yg-VJg"/>
+                                            <segue destination="Zif-8U-Hj9" kind="custom" identifier="Menuclick" id="3d2-Yg-VJg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,11 +154,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cUO-Kt-xlE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KNt-XT-550">
-                        <rect key="frame" x="0.0" y="44" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-EL-zD4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleNameCell" rowHeight="65" id="IST-ef-ddh" customClass="ArticleTableViewCell" customModule="SJA" customModuleProvider="target">
@@ -168,13 +168,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-zb-rda">
-                                                    <rect key="frame" x="8" y="11" width="99" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Sq-UgV">
-                                                    <rect key="frame" x="8" y="35" width="46" height="21"/>
+                                                    <rect key="frame" x="8" y="35" width="584" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="fui-if-vBw"/>
                                                     </constraints>
@@ -184,10 +184,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="aJc-zb-rda" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="2gj-Od-Nvn"/>
                                                 <constraint firstItem="LYT-Sq-UgV" firstAttribute="top" secondItem="aJc-zb-rda" secondAttribute="bottom" constant="3" id="4EY-Tr-5zN"/>
                                                 <constraint firstItem="LYT-Sq-UgV" firstAttribute="bottom" secondItem="t2U-fH-bih" secondAttribute="bottomMargin" id="DA9-wz-pcs"/>
                                                 <constraint firstItem="LYT-Sq-UgV" firstAttribute="leading" secondItem="aJc-zb-rda" secondAttribute="leading" id="RZv-Ix-FlD"/>
                                                 <constraint firstItem="aJc-zb-rda" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="Rzg-kU-cFr"/>
+                                                <constraint firstItem="LYT-Sq-UgV" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="Vcn-3z-WgU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LYT-Sq-UgV" secondAttribute="trailing" id="ZxL-q9-Kcj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aJc-zb-rda" secondAttribute="trailing" id="bpP-Jz-NFK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -199,7 +203,7 @@
                                 </prototypes>
                             </tableView>
                             <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-cE-Pt7">
-                                <rect key="frame" x="300" y="0.0" width="300" height="536"/>
+                                <rect key="frame" x="300" y="0.0" width="300" height="600"/>
                                 <color key="backgroundColor" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="WJC-NP-En0" kind="embed" id="2yM-si-D3B"/>
@@ -246,8 +250,23 @@
                     <view key="view" contentMode="scaleToFill" id="d2L-dp-puj">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-eH-FkE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gTs-eH-FkE" secondAttribute="trailing" id="L6P-Hg-ydW"/>
+                            <constraint firstItem="gTs-eH-FkE" firstAttribute="bottom" secondItem="yHV-BT-YAT" secondAttribute="top" id="Xbu-e1-5Qe"/>
+                            <constraint firstItem="gTs-eH-FkE" firstAttribute="top" secondItem="X9V-9K-Swd" secondAttribute="bottom" id="dcv-4X-sdg"/>
+                            <constraint firstItem="gTs-eH-FkE" firstAttribute="leading" secondItem="d2L-dp-puj" secondAttribute="leading" id="ufo-Sb-nOL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="gTs-eH-FkE" id="kpt-sf-kUk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvK-9J-CHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -35,6 +35,7 @@ class TopicViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
     
     @IBAction func menuAction() {
         if menuContainer!.hidden {
@@ -53,8 +54,8 @@ extension TopicViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
         let row = indexPath.row
-        cell.articleName.text = "8 Churches Burned"
-        cell.articleSource.text = "Feminista"
+        cell.articleName.text = "5 Ways White Transgender People Have Privilege Over Transgender People of Color"
+        cell.articleSource.text = "Black Girl Dangerous"
         
         return cell
     }

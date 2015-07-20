@@ -17,6 +17,13 @@
 		6314919F1B56FC76004F88F0 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314919E1B56FC76004F88F0 /* TopicTableViewCell.swift */; };
 		631491A11B5701B9004F88F0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631491A01B5701B9004F88F0 /* TopicViewController.swift */; };
 		6346A3C61B57196800B41C6B /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346A3C51B57196800B41C6B /* ArticleViewController.swift */; };
+		6370E9241B5D5BBA00AD7941 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9231B5D5BBA00AD7941 /* MWFeedParser.m */; };
+		6370E92C1B5D5CD100AD7941 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9261B5D5CD100AD7941 /* MWFeedInfo.m */; };
+		6370E92D1B5D5CD100AD7941 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9281B5D5CD100AD7941 /* MWFeedItem.m */; };
+		6370E9301B5D60A000AD7941 /* FeedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370E92F1B5D60A000AD7941 /* FeedHelper.swift */; };
+		6370E9361B5D654600AD7941 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9331B5D654600AD7941 /* NSDate+InternetDateTime.m */; };
+		6370E9371B5D654600AD7941 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9351B5D654600AD7941 /* NSString+HTML.m */; };
+		6370E93B1B5D6D1C00AD7941 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E93A1B5D6D1C00AD7941 /* GTMNSString+HTML.m */; };
 		63B68FE81B570C3800039F8C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B68FE71B570C3800039F8C /* ArticleTableViewCell.swift */; };
 		63B68FEB1B570F2C00039F8C /* MenuButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +53,21 @@
 		6314919E1B56FC76004F88F0 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		631491A01B5701B9004F88F0 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		6346A3C51B57196800B41C6B /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		6370E91D1B5D599900AD7941 /* SJA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJA-Bridging-Header.h"; sourceTree = "<group>"; };
+		6370E9221B5D5BBA00AD7941 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		6370E9231B5D5BBA00AD7941 /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		6370E9251B5D5CD100AD7941 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		6370E9261B5D5CD100AD7941 /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		6370E9271B5D5CD100AD7941 /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		6370E9281B5D5CD100AD7941 /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		6370E9291B5D5CD100AD7941 /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		6370E92F1B5D60A000AD7941 /* FeedHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedHelper.swift; sourceTree = "<group>"; };
+		6370E9321B5D654600AD7941 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		6370E9331B5D654600AD7941 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		6370E9341B5D654600AD7941 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		6370E9351B5D654600AD7941 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		6370E9391B5D6D1C00AD7941 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		6370E93A1B5D6D1C00AD7941 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		63B68FE71B570C3800039F8C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +111,7 @@
 		631491701B56CD1D004F88F0 /* SJA */ = {
 			isa = PBXGroup;
 			children = (
+				6370E9211B5D5BBA00AD7941 /* FeedHelper */,
 				63B68FE91B570F1C00039F8C /* Helper */,
 				6314919D1B56FC65004F88F0 /* Views */,
 				631491931B56CEF5004F88F0 /* ViewControllers */,
@@ -98,6 +121,7 @@
 				6314917A1B56CD1D004F88F0 /* Images.xcassets */,
 				6314917C1B56CD1D004F88F0 /* LaunchScreen.xib */,
 				631491711B56CD1D004F88F0 /* Supporting Files */,
+				6370E91D1B5D599900AD7941 /* SJA-Bridging-Header.h */,
 			);
 			path = SJA;
 			sourceTree = "<group>";
@@ -146,10 +170,47 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6370E9211B5D5BBA00AD7941 /* FeedHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6370E9311B5D64E600AD7941 /* Categories */,
+				6370E9221B5D5BBA00AD7941 /* MWFeedParser.h */,
+				6370E9231B5D5BBA00AD7941 /* MWFeedParser.m */,
+				6370E9251B5D5CD100AD7941 /* MWFeedInfo.h */,
+				6370E9261B5D5CD100AD7941 /* MWFeedInfo.m */,
+				6370E9271B5D5CD100AD7941 /* MWFeedItem.h */,
+				6370E9281B5D5CD100AD7941 /* MWFeedItem.m */,
+				6370E9291B5D5CD100AD7941 /* MWFeedParser_Private.h */,
+			);
+			path = FeedHelper;
+			sourceTree = "<group>";
+		};
+		6370E9311B5D64E600AD7941 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6370E9381B5D6D0600AD7941 /* Categories Helper */,
+				6370E9321B5D654600AD7941 /* NSDate+InternetDateTime.h */,
+				6370E9331B5D654600AD7941 /* NSDate+InternetDateTime.m */,
+				6370E9341B5D654600AD7941 /* NSString+HTML.h */,
+				6370E9351B5D654600AD7941 /* NSString+HTML.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6370E9381B5D6D0600AD7941 /* Categories Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6370E9391B5D6D1C00AD7941 /* GTMNSString+HTML.h */,
+				6370E93A1B5D6D1C00AD7941 /* GTMNSString+HTML.m */,
+			);
+			path = "Categories Helper";
+			sourceTree = "<group>";
+		};
 		63B68FE91B570F1C00039F8C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */,
+				6370E92F1B5D60A000AD7941 /* FeedHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -256,12 +317,19 @@
 			files = (
 				6314919F1B56FC76004F88F0 /* TopicTableViewCell.swift in Sources */,
 				6346A3C61B57196800B41C6B /* ArticleViewController.swift in Sources */,
+				6370E93B1B5D6D1C00AD7941 /* GTMNSString+HTML.m in Sources */,
+				6370E9241B5D5BBA00AD7941 /* MWFeedParser.m in Sources */,
 				631491761B56CD1D004F88F0 /* ViewController.swift in Sources */,
 				631491741B56CD1D004F88F0 /* AppDelegate.swift in Sources */,
+				6370E92D1B5D5CD100AD7941 /* MWFeedItem.m in Sources */,
 				63B68FEB1B570F2C00039F8C /* MenuButtonHelper.swift in Sources */,
+				6370E9301B5D60A000AD7941 /* FeedHelper.swift in Sources */,
 				631491A11B5701B9004F88F0 /* TopicViewController.swift in Sources */,
 				63B68FE81B570C3800039F8C /* ArticleTableViewCell.swift in Sources */,
+				6370E9371B5D654600AD7941 /* NSString+HTML.m in Sources */,
 				6314919B1B56FA24004F88F0 /* MenuViewController.swift in Sources */,
+				6370E92C1B5D5CD100AD7941 /* MWFeedInfo.m in Sources */,
+				6370E9361B5D654600AD7941 /* NSDate+InternetDateTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,9 +458,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SJA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SJA/SJA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -400,9 +471,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SJA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SJA/SJA-Bridging-Header.h";
 			};
 			name = Release;
 		};

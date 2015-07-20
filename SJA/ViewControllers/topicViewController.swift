@@ -9,12 +9,15 @@
 import UIKit
 
 class TopicViewController: UIViewController {
+
     
     @IBOutlet weak var articleTableView: UITableView!
     
     
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    weak var feedParser = FeedHelper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,23 @@ class TopicViewController: UIViewController {
         }
         
         articleTableView.dataSource = self
+        articleTableView.delegate = self
         menuContainer.hidden = true
+        // Parsing done notification
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshList:", name:"refreshMyTableView", object: nil)
+//        
+//        self.articleTableView.reloadData()
+
+    }
+    
+    func refreshList(notification: NSNotification){
+        articleTableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.articleTableView.reloadData()
     }
         
     override func didReceiveMemoryWarning() {
@@ -50,18 +69,28 @@ class TopicViewController: UIViewController {
 
 extension TopicViewController: UITableViewDataSource {
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
-        let row = indexPath.row
-        cell.articleName.text = "5 Ways White Transgender People Have Privilege Over Transgender People of Color"
-        cell.articleSource.text = "Black Girl Dangerous"
+        let item = feedParser!.feedItems[indexPath.row] as MWFeedItem
+        //cell.articleName.text = "Title Name?"
+        cell.articleName.text = item.title
+        //cell.articleSource.text = feedParser.
         
         return cell
     }
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+        //return feedParser.feedItems.count
     }
     
+}
+
+extension TopicViewController : UITableViewDelegate {
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+
+    }
 }

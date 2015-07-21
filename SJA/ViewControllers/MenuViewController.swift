@@ -13,10 +13,6 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    struct Topic {
-        let topic: String = ""
-    }
-    
     var viewName: String?
     var Topics: [String] = []
     
@@ -31,6 +27,12 @@ class MenuViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let table = tableView.indexPathForSelectedRow() {
+            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: false)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

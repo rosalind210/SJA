@@ -11,20 +11,17 @@ import UIKit
 class FeedHelper: MWFeedParser, MWFeedParserDelegate {
     
     var feedItems = [MWFeedItem]()
-    //var topicViewController = TopicViewController()
     var topicURL: String?
     
     init(givenURL: String) {
         super.init()
         
         topicURL = givenURL
-        println(topicURL)
         request()
     }
     
     func request() {
         let url = NSURL(string: topicURL!)
-        println(url)
         let feedParser = MWFeedParser(feedURL: url)
         feedParser.delegate = self
         feedParser.parse()

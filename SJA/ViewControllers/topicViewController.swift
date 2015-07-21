@@ -17,8 +17,6 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    //var currentTopic: Topic?
-    
     var currentTopic: String?
     
     var feedParser = FeedHelper(givenURL: "http://www.blackgirldangerous.org/category/race/feed/")
@@ -26,7 +24,16 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println(currentTopic)
-        navigationController?.title.text = currentTopic
+        self.title = currentTopic
+        
+        var sourcesDict: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("Sources", ofType: "plist") {
+            sourcesDict = NSDictionary(contentsOfFile: path)
+        }
+        if let dict = sourcesDict {
+            println(dict[currentTopic!])
+        }
+        
         
         // Take out range of topic view controllers in between current and main
         if let navigationController = navigationController {

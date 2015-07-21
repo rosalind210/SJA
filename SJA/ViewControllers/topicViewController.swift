@@ -17,7 +17,7 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    weak var feedParser = FeedHelper()
+    var feedParser = FeedHelper(givenURL: "http://www.blackgirldangerous.org/category/race/feed/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +34,9 @@ class TopicViewController: UIViewController {
         articleTableView.dataSource = self
         articleTableView.delegate = self
         menuContainer.hidden = true
+        
         // Parsing done notification
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshList:", name:"refreshMyTableView", object: nil)
-//        
-//        self.articleTableView.reloadData()
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshList:", name:"refreshArticleNameTableView", object: nil)
     }
     
     func refreshList(notification: NSNotification){
@@ -47,6 +45,8 @@ class TopicViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        feedParser.request()
         
         self.articleTableView.reloadData()
     }
@@ -69,22 +69,21 @@ class TopicViewController: UIViewController {
 
 extension TopicViewController: UITableViewDataSource {
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
-        let item = feedParser!.feedItems[indexPath.row] as MWFeedItem
-        //cell.articleName.text = "Title Name?"
+        //println(feedParser.feedItems)
+        
+        let item = feedParser.feedItems[indexPath.row] as MWFeedItem
         cell.articleName.text = item.title
-        //cell.articleSource.text = feedParser.
+        //cell.articleSource.text =
         
         return cell
     }
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        //return feedParser.feedItems.count
+        return feedParser.feedItems.count
     }
     
 }

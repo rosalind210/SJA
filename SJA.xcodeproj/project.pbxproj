@@ -24,6 +24,7 @@
 		6370E9361B5D654600AD7941 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9331B5D654600AD7941 /* NSDate+InternetDateTime.m */; };
 		6370E9371B5D654600AD7941 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9351B5D654600AD7941 /* NSString+HTML.m */; };
 		6370E93B1B5D6D1C00AD7941 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E93A1B5D6D1C00AD7941 /* GTMNSString+HTML.m */; };
+		6370E93D1B5DA96100AD7941 /* Sources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6370E93C1B5DA96100AD7941 /* Sources.plist */; };
 		63B68FE81B570C3800039F8C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B68FE71B570C3800039F8C /* ArticleTableViewCell.swift */; };
 		63B68FEB1B570F2C00039F8C /* MenuButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		6370E9351B5D654600AD7941 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		6370E9391B5D6D1C00AD7941 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		6370E93A1B5D6D1C00AD7941 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		6370E93C1B5DA96100AD7941 /* Sources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sources.plist; sourceTree = "<group>"; };
 		63B68FE71B570C3800039F8C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				631491721B56CD1D004F88F0 /* Info.plist */,
+				6370E93C1B5DA96100AD7941 /* Sources.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				631491791B56CD1D004F88F0 /* Main.storyboard in Resources */,
 				6314917E1B56CD1D004F88F0 /* LaunchScreen.xib in Resources */,
 				6314917B1B56CD1D004F88F0 /* Images.xcassets in Resources */,
+				6370E93D1B5DA96100AD7941 /* Sources.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

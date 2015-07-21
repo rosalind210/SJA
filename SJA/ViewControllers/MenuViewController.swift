@@ -19,7 +19,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Topics = ["Class", "Crime", "Education", "Fenimism", "Mental Illness","Race", "Self-Worth", "Sexism", "Spectrum"]
+        Topics = ["Class", "Crime", "Education", "Fenimism","Race",  "Sexism", "Spectrum", "Wellness"]
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -36,6 +36,8 @@ extension MenuViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
+        var selectedTopic = Topics[row]
+        
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
         if viewName == "View Controller"{
@@ -57,7 +59,8 @@ extension MenuViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Topics.count
     }
-
+    
+ 
 }
 
 extension MenuViewController: UITableViewDelegate {

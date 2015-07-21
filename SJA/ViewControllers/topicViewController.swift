@@ -17,10 +17,16 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    //var currentTopic: Topic?
+    
+    var currentTopic: String?
+    
     var feedParser = FeedHelper(givenURL: "http://www.blackgirldangerous.org/category/race/feed/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(currentTopic)
+        navigationController?.title.text = currentTopic
         
         // Take out range of topic view controllers in between current and main
         if let navigationController = navigationController {

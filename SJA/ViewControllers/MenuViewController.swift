@@ -13,20 +13,31 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    struct Topic {
+        let topic: String = ""
+    }
+    
     var viewName: String?
     var Topics: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Topics = ["Class", "Crime", "Education", "Fenimism","Race",  "Sexism", "Spectrum", "Wellness"]
+        Topics = ["Class", "Crime", "Education", "Feminism","Race",  "Sexism", "Spectrum", "Wellness"]
         
         tableView.dataSource = self
-        tableView.delegate = self
+        //tableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! TopicViewController
+        let indexPath = tableView.indexPathForSelectedRow()
+        let topic = Topics[indexPath!.row]
+        destinationVC.currentTopic = topic
     }
     
 }
@@ -36,7 +47,18 @@ extension MenuViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-        var selectedTopic = Topics[row]
+        
+//        // holds topic chosen info
+//        let selectedTopic = Topics[row]
+//        
+//        //println(selectedTopic)
+//        
+//        // sets the destination view controller to the topic view controller
+//        let destinationVC = TopicViewController()
+//        destinationVC.currentTopic = selectedTopic // sets the topic chosen to a variable in tvc
+//        //perform segue
+//        destinationVC.performSegueWithIdentifier("MenuClick", sender: self)
+        
         
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
@@ -61,14 +83,4 @@ extension MenuViewController: UITableViewDataSource {
     }
     
  
-}
-
-extension MenuViewController: UITableViewDelegate {
-    
-//    //let source = ViewController()
-//    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let source = ViewController()
-//        source.menuContainer.hidden = true
-//    }
 }

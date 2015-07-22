@@ -34,11 +34,12 @@ class FeedHelper: MWFeedParser, MWFeedParserDelegate {
     }
     
     func feedParserDidFinish(parser: MWFeedParser!) {
-        NSNotificationCenter.defaultCenter().postNotificationName("refreshArticleNameTableView", object: nil)
+//        NSNotificationCenter.defaultCenter().postNotificationName("refreshArticleNameTableView", object: nil)
     }
 
     
     func feedParser(parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
+        println("Item loaded")
         feedItems.append(item)
     }
     

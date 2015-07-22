@@ -160,36 +160,36 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-EL-zD4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-EL-zD4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleNameCell" rowHeight="65" id="IST-ef-ddh" customClass="ArticleTableViewCell" customModule="SJA" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleNameCell" rowHeight="75" id="IST-ef-ddh" customClass="ArticleTableViewCell" customModule="SJA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IST-ef-ddh" id="t2U-fH-bih">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-zb-rda">
-                                                    <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Sq-UgV">
+                                                    <rect key="frame" x="8" y="53" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="fui-if-vBw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.41453598484848486" green="0.41453598484848486" blue="0.41453598484848486" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="0.60692866161616155" green="0.60692866161616155" blue="0.60692866161616155" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-zb-rda">
+                                                    <rect key="frame" x="8" y="36" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Sq-UgV">
-                                                    <rect key="frame" x="8" y="35" width="584" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="fui-if-vBw"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.41453598484848486" green="0.41453598484848486" blue="0.41453598484848486" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="0.60692866161616155" green="0.60692866161616155" blue="0.60692866161616155" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aJc-zb-rda" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="2gj-Od-Nvn"/>
-                                                <constraint firstItem="LYT-Sq-UgV" firstAttribute="top" secondItem="aJc-zb-rda" secondAttribute="bottom" constant="3" id="4EY-Tr-5zN"/>
-                                                <constraint firstItem="LYT-Sq-UgV" firstAttribute="bottom" secondItem="t2U-fH-bih" secondAttribute="bottomMargin" id="DA9-wz-pcs"/>
+                                                <constraint firstItem="LYT-Sq-UgV" firstAttribute="top" secondItem="aJc-zb-rda" secondAttribute="bottom" constant="-4" id="4EY-Tr-5zN"/>
+                                                <constraint firstItem="LYT-Sq-UgV" firstAttribute="bottom" secondItem="t2U-fH-bih" secondAttribute="bottomMargin" constant="8" id="DA9-wz-pcs"/>
                                                 <constraint firstItem="LYT-Sq-UgV" firstAttribute="leading" secondItem="aJc-zb-rda" secondAttribute="leading" id="RZv-Ix-FlD"/>
                                                 <constraint firstItem="aJc-zb-rda" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="Rzg-kU-cFr"/>
                                                 <constraint firstItem="LYT-Sq-UgV" firstAttribute="leading" secondItem="t2U-fH-bih" secondAttribute="leadingMargin" id="Vcn-3z-WgU"/>
@@ -280,7 +280,7 @@
         <image name="Menu" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eMt-LW-jxb"/>
+        <segue reference="2yM-si-D3B"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

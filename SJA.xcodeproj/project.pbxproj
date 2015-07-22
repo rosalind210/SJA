@@ -16,6 +16,7 @@
 		6314919B1B56FA24004F88F0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314919A1B56FA24004F88F0 /* MenuViewController.swift */; };
 		6314919F1B56FC76004F88F0 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314919E1B56FC76004F88F0 /* TopicTableViewCell.swift */; };
 		631491A11B5701B9004F88F0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631491A01B5701B9004F88F0 /* TopicViewController.swift */; };
+		634216861B5EFFCF00A3CC61 /* FeedCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634216851B5EFFCF00A3CC61 /* FeedCollector.swift */; };
 		6346A3C61B57196800B41C6B /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346A3C51B57196800B41C6B /* ArticleViewController.swift */; };
 		6370E9241B5D5BBA00AD7941 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9231B5D5BBA00AD7941 /* MWFeedParser.m */; };
 		6370E92C1B5D5CD100AD7941 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370E9261B5D5CD100AD7941 /* MWFeedInfo.m */; };
@@ -53,6 +54,7 @@
 		6314919A1B56FA24004F88F0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6314919E1B56FC76004F88F0 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		631491A01B5701B9004F88F0 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		634216851B5EFFCF00A3CC61 /* FeedCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollector.swift; sourceTree = "<group>"; };
 		6346A3C51B57196800B41C6B /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		6370E91D1B5D599900AD7941 /* SJA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJA-Bridging-Header.h"; sourceTree = "<group>"; };
 		6370E9221B5D5BBA00AD7941 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */,
 				6370E92F1B5D60A000AD7941 /* FeedHelper.swift */,
+				634216851B5EFFCF00A3CC61 /* FeedCollector.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				6370E92D1B5D5CD100AD7941 /* MWFeedItem.m in Sources */,
 				63B68FEB1B570F2C00039F8C /* MenuButtonHelper.swift in Sources */,
 				6370E9301B5D60A000AD7941 /* FeedHelper.swift in Sources */,
+				634216861B5EFFCF00A3CC61 /* FeedCollector.swift in Sources */,
 				631491A11B5701B9004F88F0 /* TopicViewController.swift in Sources */,
 				63B68FE81B570C3800039F8C /* ArticleTableViewCell.swift in Sources */,
 				6370E9371B5D654600AD7941 /* NSString+HTML.m in Sources */,

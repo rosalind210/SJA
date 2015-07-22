@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Test</key>
+	<array>
+		<string>http://blavity.com/category/life-style/feed/</string>
+	</array>
 	<key>Class</key>
 	<array>
 		<string>http://theguardian.com/business/diversity-and-equality/rss</string>
@@ -46,16 +50,20 @@
 	</array>
 	<key>Race</key>
 	<array>
-		<string>http://truthvoice.com/tag/racism/feed/</string>
-		<string>http://feeds.huffingtonpost.com/c/35496/f/677047/index.rss</string>
-		<string>http://npr.org/rss/rss.php?id=1015</string>
-		<string>http://theguardian.com/world/race/rss</string>
-		<string>http://feministing.com/tag/race/feed/</string>
-		<string>http://feministing.com/tag/racism/feed/</string>
-		<string>http://feministing.com/tag/microaggressions/feed/</string>
-		<string>http://feministing.com/tag/cultural-appropriation/feed/</string>
-		<string>http://everydayfeminism.com/tag/race-ethnicity/feed/</string>
 		<string>http://blackgirldangerous.org/category/race/feed/</string>
+		<string>http://feministing.com/tag/racism/feed/</string>
+		<string>http://blavity.com/category/black-history/feed/</string>
+		<string>http://truthvoice.com/tag/racism/feed/</string>
+		<string>http://feministing.com/tag/cultural-appropriation/feed/</string>
+		<string>http://feeds.huffingtonpost.com/c/35496/f/677047/index.rss</string>
+		<string>http://feministing.com/tag/race/feed/</string>
+		<string>http://npr.org/rss/rss.php?id=1015</string>
+		<string>http://blavity.com/category/culture/race-identity/feed/</string>
+		<string>http://theguardian.com/world/race/rss</string>
+		<string>http://blavity.com/category/news/feed/</string>
+		<string>http://feministing.com/tag/microaggressions/feed/</string>
+		<string>http://everydayfeminism.com/tag/race-ethnicity/feed/</string>
+		<string>http://blavity.com/category/life-style/feed/</string>
 	</array>
 	<key>Sexism</key>
 	<array>

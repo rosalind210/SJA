@@ -14,15 +14,14 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewName: String?
-    var Topics: [String] = []
+    var topics: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Topics = ["Class", "Crime", "Education", "Feminism","Race",  "Sexism", "Spectrum", "Wellness"]
+        topics = ["Test", "Class", "Crime", "Education", "Feminism","Race",  "Sexism", "Spectrum", "Wellness"]
         
         tableView.dataSource = self
-        //tableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,10 +34,11 @@ class MenuViewController: UIViewController {
         }
     }
     
+    // Passes the topic, and therefore the rss links, through the segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController as! TopicViewController
         let indexPath = tableView.indexPathForSelectedRow()
-        let topic = Topics[indexPath!.row]
+        let topic = topics[indexPath!.row]
         destinationVC.currentTopic = topic
     }
     
@@ -49,19 +49,7 @@ extension MenuViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-        
-//        // holds topic chosen info
-//        let selectedTopic = Topics[row]
-//        
-//        //println(selectedTopic)
-//        
-//        // sets the destination view controller to the topic view controller
-//        let destinationVC = TopicViewController()
-//        destinationVC.currentTopic = selectedTopic // sets the topic chosen to a variable in tvc
-//        //perform segue
-//        destinationVC.performSegueWithIdentifier("MenuClick", sender: self)
-        
-        
+
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
         if viewName == "View Controller"{
@@ -76,12 +64,12 @@ extension MenuViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! TopicTableViewCell
         let row = indexPath.row
-        cell.topicLabel.text = Topics[row]
+        cell.topicLabel.text = topics[row]
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Topics.count
+        return topics.count
     }
     
  

@@ -18,22 +18,28 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var currentTopic: String?
+    var feedArray: [String] = []
     
-    var feedParser = FeedHelper(givenURL: "http://www.blackgirldangerous.org/category/race/feed/")
-
+    var delegate: FeedCollectorDelegate! = nil
+    
+    var feedCollector: FeedCollector?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(currentTopic)
+        println(currentTopic!)
         self.title = currentTopic
         
+        //read through sources dictionary from supporting files
         var sourcesDict: NSDictionary?
         if let path = NSBundle.mainBundle().pathForResource("Sources", ofType: "plist") {
             sourcesDict = NSDictionary(contentsOfFile: path)
         }
         if let dict = sourcesDict {
-            println(dict[currentTopic!])
+            feedArray = dict[currentTopic!] as! Array //casts plist array to array of strings
+            println("Point A")
+            feedCollector = FeedCollector(listOfURLs: feedArray)
+            println("Point B")
         }
-        
         
         // Take out range of topic view controllers in between current and main
         if let navigationController = navigationController {
@@ -48,18 +54,14 @@ class TopicViewController: UIViewController {
         articleTableView.delegate = self
         menuContainer.hidden = true
         
-        // Parsing done notification
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshList:", name:"refreshArticleNameTableView", object: nil)
-    }
-    
-    func refreshList(notification: NSNotification){
-        articleTableView.reloadData()
+        feedCollector?.createFeedHelpers()
+
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        feedParser.request()
+        //feedParser.request()
         
         self.articleTableView.reloadData()
     }
@@ -76,7 +78,20 @@ class TopicViewController: UIViewController {
             menuContainer!.hidden = true
         }
     }
-
+    
+    var item: MWFeedItem?
+    
+//    let destinationVC = segue.destinationViewController as! TopicViewController
+//    let indexPath = tableView.indexPathForSelectedRow()
+//    let topic = topics[indexPath!.row]
+//    destinationVC.currentTopic = topic
+    
+    // segue to aricleviewcontroller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! ArticleViewController
+        let article = item!.link
+        destinationVC.chosenArticle = article
+    }
     
 }
 
@@ -85,10 +100,8 @@ extension TopicViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
-        //println(feedParser.feedItems)
-        
-        let item = feedParser.feedItems[indexPath.row] as MWFeedItem
-        cell.articleName.text = item.title
+        item = feedCollector!.feedItems[indexPath.row] as MWFeedItem
+        cell.articleName.text = item!.title
         //cell.articleSource.text =
         
         return cell
@@ -96,7 +109,7 @@ extension TopicViewController: UITableViewDataSource {
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedParser.feedItems.count
+        return feedCollector!.feedItems.count
     }
     
 }

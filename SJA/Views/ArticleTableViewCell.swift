@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Bond
 
 class ArticleTableViewCell: UITableViewCell {
 

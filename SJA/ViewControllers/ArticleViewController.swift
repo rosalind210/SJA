@@ -12,6 +12,7 @@ class ArticleViewController: UIViewController {
 
     var webView: WKWebView! //for displaying web content
     var chosenArticle: String?
+    var articleTitle: String?
     
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var forwardButton: UIBarButtonItem!
@@ -27,6 +28,8 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = articleTitle
+        
         // adds webview to main view below the progress view
         view.insertSubview(webView, belowSubview: progressView)
         
@@ -36,7 +39,7 @@ class ArticleViewController: UIViewController {
         let width = NSLayoutConstraint(item: webView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 0) // define width equal to superview
         view.addConstraints([height, width]) //adds constraints to view
         
-        // add class as observers
+        // observers
         webView.addObserver(self, forKeyPath: "loading", options: .New, context: nil)
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
         
@@ -44,11 +47,26 @@ class ArticleViewController: UIViewController {
         let url = NSURL(string: chosenArticle!)
         let requestObj = NSURLRequest(URL: url!)
         webView.loadRequest(requestObj)
+        
+        
 
         //buttons are definitely not enabled
         backButton.enabled = false
         forwardButton.enabled = false
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // hides navigation bar when scrolling
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        webView.removeObserver(self, forKeyPath: "loading", context: nil)
+        webView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
+        //webView.setDelegate = nil
+        progressView.removeFromSuperview()
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +107,12 @@ class ArticleViewController: UIViewController {
         webView.loadRequest(request)
     }
     
+    // MARK: - Javascript changes
+    
+//    var setElementDisplayStyle = function(id, style) {
+//        var element = document.getElementById(id);
+//        if(element) element.style.display = style;
+//    }
 
     /*
     // MARK: - Navigation

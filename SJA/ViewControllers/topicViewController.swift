@@ -87,6 +87,7 @@ class TopicViewController: UIViewController {
                 let destVC = segue.destinationViewController as! ArticleViewController
                 let cell = sender as! ArticleTableViewCell
                 destVC.chosenArticle = cell.link
+                destVC.articleTitle = cell.articleName.text
         }
     }
     

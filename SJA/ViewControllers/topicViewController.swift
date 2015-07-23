@@ -24,6 +24,8 @@ class TopicViewController: UIViewController {
     
     var feedCollector: FeedCollector?
     
+    var item: MWFeedItem?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         println(currentTopic!)
@@ -79,18 +81,13 @@ class TopicViewController: UIViewController {
         }
     }
     
-    var item: MWFeedItem?
-    
-//    let destinationVC = segue.destinationViewController as! TopicViewController
-//    let indexPath = tableView.indexPathForSelectedRow()
-//    let topic = topics[indexPath!.row]
-//    destinationVC.currentTopic = topic
-    
     // segue to aricleviewcontroller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationVC = segue.destinationViewController as! ArticleViewController
-        let article = item!.link
-        destinationVC.chosenArticle = article
+            if (segue.identifier == "ArticleClick") {
+                let destVC = segue.destinationViewController as! ArticleViewController
+                let cell = sender as! ArticleTableViewCell
+                destVC.chosenArticle = cell.link
+        }
     }
     
 }
@@ -100,7 +97,11 @@ extension TopicViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
-        item = feedCollector!.feedItems[indexPath.row] as MWFeedItem
+        item = self.feedCollector!.feedItems[indexPath.row] as MWFeedItem
+        println(item!.link)
+        
+        cell.link = item!.link
+        
         cell.articleName.text = item!.title
         //cell.articleSource.text =
         
@@ -115,7 +116,5 @@ extension TopicViewController: UITableViewDataSource {
 }
 
 extension TopicViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
 
-    }
 }

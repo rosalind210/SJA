@@ -16,7 +16,7 @@ protocol FeedCollectorDelegate {
 class FeedCollector {
     
     var feedArray: [String] = []
-    var feedItemArray = [FeedHelper]()
+    //var feedItemArray = [FeedHelper]()
     var feedItems = [MWFeedItem]()
     
     init(listOfURLs: [String]) {
@@ -35,7 +35,7 @@ class FeedCollector {
             var url = feedArray[i]
             
             var feed = FeedHelper(givenURL: url)
-            feedItemArray.append(feed)
+            //println(feed.feedItems)
             addFeedItems(feed)
             println("Feed finished \(i)")
         }
@@ -44,6 +44,9 @@ class FeedCollector {
     
     func addFeedItems(feed: FeedHelper) {
         for i in feed.feedItems {
+            println(i)
+            println(i.link)
+            println()
             feedItems.append(i)
         }
     }

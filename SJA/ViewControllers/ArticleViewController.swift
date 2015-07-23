@@ -16,7 +16,9 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://www.blackgirldangerous.org/2015/07/5-ways-white-transgender-people-have-privilege-over-transgender-people-of-color/")
+        //let url = NSURL(fileURLWithPath: chosenArticle!)
+        let url = NSURL(string: chosenArticle!)
+        
         let requestObj = NSURLRequest(URL: url!)
         webView.loadRequest(requestObj)
         

@@ -200,7 +200,7 @@
                                         <connections>
                                             <outlet property="articleName" destination="aJc-zb-rda" id="b94-9V-5JJ"/>
                                             <outlet property="articleSource" destination="LYT-Sq-UgV" id="mDA-hF-4eI"/>
-                                            <segue destination="2HC-1A-yd5" kind="show" id="25K-Ge-77D"/>
+                                            <segue destination="2HC-1A-yd5" kind="custom" identifier="ArticleClick" id="25K-Ge-77D"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -280,7 +280,7 @@
         <image name="Menu" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2yM-si-D3B"/>
+        <segue reference="eMt-LW-jxb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

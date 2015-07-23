@@ -44,9 +44,9 @@ class FeedCollector {
     
     func addFeedItems(feed: FeedHelper) {
         for i in feed.feedItems {
-            println(i)
-            println(i.link)
-            println()
+//            println(i)
+//            println(i.link)
+//            println()
             feedItems.append(i)
         }
     }

@@ -44,7 +44,7 @@
 		6314916E1B56CD1D004F88F0 /* SJA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631491721B56CD1D004F88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631491731B56CD1D004F88F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		631491751B56CD1D004F88F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		631491751B56CD1D004F88F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		631491781B56CD1D004F88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6314917A1B56CD1D004F88F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6314917D1B56CD1D004F88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 				6314919D1B56FC65004F88F0 /* Views */,
 				631491931B56CEF5004F88F0 /* ViewControllers */,
 				631491731B56CD1D004F88F0 /* AppDelegate.swift */,
-				631491751B56CD1D004F88F0 /* ViewController.swift */,
 				631491771B56CD1D004F88F0 /* Main.storyboard */,
 				6314917A1B56CD1D004F88F0 /* Images.xcassets */,
 				6314917C1B56CD1D004F88F0 /* LaunchScreen.xib */,
@@ -159,6 +158,7 @@
 		631491931B56CEF5004F88F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				631491751B56CD1D004F88F0 /* ViewController.swift */,
 				6314919A1B56FA24004F88F0 /* MenuViewController.swift */,
 				631491A01B5701B9004F88F0 /* TopicViewController.swift */,
 				6346A3C51B57196800B41C6B /* ArticleViewController.swift */,

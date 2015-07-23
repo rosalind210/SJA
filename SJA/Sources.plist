@@ -9,12 +9,12 @@
 	<key>Class</key>
 	<array>
 		<string>http://theguardian.com/business/diversity-and-equality/rss</string>
+		<string>http://www.salon.com/topic/class/feed/</string>
 		<string>http://feministing.com/tag/gender-gap/feed/</string>
 		<string>http://feministing.com/tag/white-privilege/feed/</string>
 		<string>http://feministing.com/tag/class/feed/</string>
 		<string>http://everydayfeminism.com/tag/class/feed/</string>
 		<string>http://everydayfeminism.com/tag/work/feed/</string>
-		<string>http://feeds.dailykos.com/user/labor/rss.xml</string>
 		<string>http://blogher.com/taxonomy/term/25/feed</string>
 	</array>
 	<key>Crime</key>
@@ -33,6 +33,7 @@
 	<key>Education</key>
 	<array>
 		<string>http://businessinsider.com/education/rss</string>
+		<string>http://www.salon.com/topic/education/feed/</string>
 		<string>http://latimes.com/local/education/rss2.0.xml</string>
 		<string>http://blackgirldangerous.org/category/education/feed/</string>
 		<string>http://npr.org/rss/rss.php?id=1013</string>
@@ -42,6 +43,7 @@
 	<key>Feminism</key>
 	<array>
 		<string>http://everydayfeminism.com/tag/fem101/feed/</string>
+		<string>http://www.salon.com/topic/feminism/feed/</string>
 		<string>http://blackgirldangerous.org/category/feminism/feed/</string>
 		<string>http://feministing.com/tag/feminism/feed/</string>
 		<string>http://feministing.com/tag/male-allies/feed/</string>
@@ -51,6 +53,7 @@
 	<key>Race</key>
 	<array>
 		<string>http://blackgirldangerous.org/category/race/feed/</string>
+		<string>http://www.salon.com/topic/race/feed/</string>
 		<string>http://feministing.com/tag/racism/feed/</string>
 		<string>http://blavity.com/category/black-history/feed/</string>
 		<string>http://truthvoice.com/tag/racism/feed/</string>
@@ -68,6 +71,7 @@
 	<key>Sexism</key>
 	<array>
 		<string>http://blackgirldangerous.org/category/sexism/feed/</string>
+		<string>http://www.salon.com/topic/sexism/feed/</string>
 		<string>http://feministing.com/tag/sexism/feed/</string>
 		<string>http://feministing.com/tag/masculinity/feed/</string>
 		<string>http://feministing.com/tag/mansplaining/feed/</string>
@@ -76,6 +80,7 @@
 	</array>
 	<key>Spectrum</key>
 	<array>
+		<string>http://www.salon.com/topic/lgbt/feed/</string>
 		<string>http://blackgirldangerous.org/category/transgender/feed/</string>
 		<string>http://blackgirldangerous.org/category/queer/feed/</string>
 		<string>http://blackgirldangerous.org/category/gender/feed/</string>
@@ -98,6 +103,7 @@
 	<key>Wellness</key>
 	<array>
 		<string>http://blackgirldangerous.org/category/wellness/feed/</string>
+		<string>http://www.salon.com/topic/mental-illness/feed/</string>
 		<string>http://blackgirldangerous.org/category/mental-health/feed/</string>
 		<string>http://everydayfeminism.com/tag/health-body/feed/</string>
 		<string>http://feministing.com/tag/mental-health/feed/</string>

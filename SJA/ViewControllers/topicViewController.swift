@@ -97,7 +97,7 @@ extension TopicViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
-        item = self.feedCollector!.feedItems[indexPath.row] as MWFeedItem
+        item = feedCollector!.feedItems[indexPath.row] as MWFeedItem
         println(item!.link)
         
         cell.link = item!.link

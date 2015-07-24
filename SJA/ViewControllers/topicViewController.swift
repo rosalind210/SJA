@@ -30,6 +30,15 @@ class TopicViewController: UIViewController {
         super.viewDidLoad()
         println(currentTopic!)
         self.title = currentTopic
+                
+        // Take out range of topic view controllers in between current and main
+        if let navigationController = navigationController {
+            var navControllers = navigationController.viewControllers
+            if navControllers.count > 2 {
+                navControllers.removeRange(1..<(navControllers.count - 1))
+                navigationController.viewControllers = navControllers
+            }
+        }
         
         //read through sources dictionary from supporting files
         var sourcesDict: NSDictionary?
@@ -43,15 +52,6 @@ class TopicViewController: UIViewController {
             println("Point B")
         }
         
-        // Take out range of topic view controllers in between current and main
-        if let navigationController = navigationController {
-            var navControllers = navigationController.viewControllers
-            if navControllers.count > 2 {
-                navControllers.removeRange(1..<(navControllers.count - 1))
-                navigationController.viewControllers = navControllers
-            }
-        }
-        
         articleTableView.dataSource = self
         articleTableView.delegate = self
         menuContainer.hidden = true
@@ -63,7 +63,8 @@ class TopicViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //feedParser.request()
+        menuContainer.hidden = true
+        
         
         self.articleTableView.reloadData()
     }

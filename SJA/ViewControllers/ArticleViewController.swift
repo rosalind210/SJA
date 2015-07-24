@@ -9,7 +9,7 @@
 import WebKit
 
 class ArticleViewController: UIViewController {
-
+    
     var webView: WKWebView! //for displaying web content
     var chosenArticle: String?
     var articleTitle: String?
@@ -18,6 +18,9 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var forwardButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var menuContainer: UIView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     // initializes webView with frame size zero
     required init(coder aDecoder: NSCoder) {
@@ -44,12 +47,18 @@ class ArticleViewController: UIViewController {
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
         
         // creates and loads article link
-        let url = NSURL(string: chosenArticle!)
-        let requestObj = NSURLRequest(URL: url!)
-        webView.loadRequest(requestObj)
+        if chosenArticle == nil { //if this is the main screen
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //allows access to AppDelegate
+            let url = NSURL(string: appDelegate.url!) //gets url from AppDelegate field
+            let requestObj = NSURLRequest(URL: url!)
+            webView.loadRequest(requestObj)
+        } else { //if this is coming from the tvc
+            let url = NSURL(string: chosenArticle!)
+            let requestObj = NSURLRequest(URL: url!)
+            webView.loadRequest(requestObj)
+        }
         
         
-
         //buttons are definitely not enabled
         backButton.enabled = false
         forwardButton.enabled = false
@@ -68,7 +77,7 @@ class ArticleViewController: UIViewController {
         //webView.setDelegate = nil
         progressView.removeFromSuperview()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -92,6 +101,16 @@ class ArticleViewController: UIViewController {
         progressView.setProgress(0.0, animated: false)
     }
     
+    // MARK: - Navigation Controller for opening screen
+    @IBAction func menuAction() {
+        if menuContainer!.hidden {
+            menuContainer!.hidden = false
+        } else {
+            menuContainer!.hidden = true
+        }
+    }
+
+    
     // MARK: - Toolbar Actions
     
     @IBAction func back(sender:UIBarButtonItem) {
@@ -107,21 +126,14 @@ class ArticleViewController: UIViewController {
         webView.loadRequest(request)
     }
     
-    // MARK: - Javascript changes
-    
-//    var setElementDisplayStyle = function(id, style) {
-//        var element = document.getElementById(id);
-//        if(element) element.style.display = style;
-//    }
-
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

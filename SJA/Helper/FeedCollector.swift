@@ -16,6 +16,7 @@ protocol FeedCollectorDelegate {
 class FeedCollector {
     
     var feedArray: [String] = []
+   // var randomArticle: String
     //var feedItemArray = [FeedHelper]()
     var feedItems = [MWFeedItem]()
     

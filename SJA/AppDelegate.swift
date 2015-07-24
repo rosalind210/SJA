@@ -12,10 +12,35 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var url: String?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //LOAD RANDOM ARTICLE
+        //read through sources dictionary
+        var sourcesDict: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("Sources", ofType: "plist") {
+            sourcesDict = NSDictionary(contentsOfFile: path)
+        }
+        
+        if let dict = sourcesDict {
+            let topicArray = dict.allKeys as! [String] //get an array of the keys
+            let numForTopic = Int(arc4random_uniform(UInt32(topicArray.count))) //get random number between 0 and the number of keys
+            let topic = topicArray[numForTopic] //get the topic from the array
+            
+            let feeds = dict[topic] as! [String]
+            
+            //get feed
+            let randomFeed = Int(arc4random_uniform(UInt32(feeds.count)))
+            let feed = feeds[randomFeed]
+            let feedUrls = FeedHelper(givenURL: feed)
+            //get article from feed
+            let randomArticle = Int(arc4random_uniform(UInt32(feedUrls.feedItems.count)))
+            url = feedUrls.feedItems[randomArticle].link
+            println(url)
+        }
+        
         // Change status bar to white
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         return true

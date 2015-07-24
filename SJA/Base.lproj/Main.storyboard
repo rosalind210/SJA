@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Article View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,13 +34,46 @@
                                     <segue destination="WJC-NP-En0" kind="embed" id="eMt-LW-jxb"/>
                                 </connections>
                             </containerView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-6h-xce">
+                                <rect key="frame" x="-55" y="0.0" width="48" height="2"/>
+                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqo-zM-vDM">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="Back" id="fr8-eS-TGr" userLabel="backButton">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="back:" destination="2HC-1A-yd5" id="iFQ-FO-kza"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="6Pk-em-4vE"/>
+                                    <barButtonItem image="Forward" id="0g9-z5-Df5" userLabel="forwardButton">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="forward:" destination="2HC-1A-yd5" id="qwq-2k-M1X"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SmH-Cd-9WZ"/>
+                                    <barButtonItem systemItem="refresh" id="qIz-Os-YNk">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload:" destination="2HC-1A-yd5" id="UTt-ec-6vY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="b0j-qi-lRM" secondAttribute="trailing" constant="-16" id="26X-Dk-TYI"/>
                             <constraint firstAttribute="width" secondItem="b0j-qi-lRM" secondAttribute="width" multiplier="1:2" id="B5I-pG-UeO"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="FWV-RX-gIu"/>
+                            <constraint firstItem="Eqo-zM-vDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Lze-Rh-yqa"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NbS-O8-Mws"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eqo-zM-vDM" secondAttribute="bottom" id="c6A-f5-liz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eqo-zM-vDM" secondAttribute="trailing" constant="-16" id="iy0-7s-6hi"/>
+                            <constraint firstItem="ofs-6h-xce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qPB-9K-TWl"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tq1-3f-GdC"/>
                         </constraints>
                         <variation key="default">
@@ -50,16 +83,20 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bZc-sG-qLG">
-                        <barButtonItem key="rightBarButtonItem" image="Menu" id="5cP-pZ-KXS">
+                        <barButtonItem key="rightBarButtonItem" image="Menu" id="5cP-pZ-KXS" userLabel="MenuButton">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="menuAction" destination="BYZ-38-t0r" id="ROL-nB-xqY"/>
+                                <action selector="menuAction" destination="BYZ-38-t0r" id="ZpX-vy-s2P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="5cP-pZ-KXS" id="We8-GV-DBV"/>
-                        <outlet property="menuContainer" destination="b0j-qi-lRM" id="ntr-pS-mjM"/>
+                        <outlet property="backButton" destination="fr8-eS-TGr" id="CCw-vy-WIF"/>
+                        <outlet property="forwardButton" destination="0g9-z5-Df5" id="yZu-GD-Q52"/>
+                        <outlet property="menuButton" destination="5cP-pZ-KXS" id="XXh-t9-vNO"/>
+                        <outlet property="menuContainer" destination="b0j-qi-lRM" id="4EC-Rs-Mo6"/>
+                        <outlet property="progressView" destination="ofs-6h-xce" id="myU-1e-fIT"/>
+                        <outlet property="reloadButton" destination="qIz-Os-YNk" id="6E0-I2-sdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -312,7 +349,7 @@
         <image name="Menu" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2yM-si-D3B"/>
+        <segue reference="eMt-LW-jxb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-BJ-EPz">
+                                <rect key="frame" x="15.5" y="0.0" width="568" height="2"/>
+                            </progressView>
                             <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0j-qi-lRM">
                                 <rect key="frame" x="300" y="0.0" width="300" height="536"/>
                                 <color key="backgroundColor" red="0.46274509803921571" green="0.27058823529411763" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,10 +37,6 @@
                                     <segue destination="WJC-NP-En0" kind="embed" id="eMt-LW-jxb"/>
                                 </connections>
                             </containerView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-6h-xce">
-                                <rect key="frame" x="-55" y="0.0" width="48" height="2"/>
-                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqo-zM-vDM">
                                 <rect key="frame" x="0.0" y="492" width="600" height="44"/>
                                 <items>
@@ -67,14 +66,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="b0j-qi-lRM" secondAttribute="trailing" constant="-16" id="26X-Dk-TYI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MKF-BJ-EPz" secondAttribute="trailing" id="6m8-Ju-kRb"/>
                             <constraint firstAttribute="width" secondItem="b0j-qi-lRM" secondAttribute="width" multiplier="1:2" id="B5I-pG-UeO"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="FWV-RX-gIu"/>
                             <constraint firstItem="Eqo-zM-vDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Lze-Rh-yqa"/>
+                            <constraint firstItem="MKF-BJ-EPz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NT0-tM-JmB"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NbS-O8-Mws"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eqo-zM-vDM" secondAttribute="bottom" id="c6A-f5-liz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Eqo-zM-vDM" secondAttribute="trailing" constant="-16" id="iy0-7s-6hi"/>
-                            <constraint firstItem="ofs-6h-xce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qPB-9K-TWl"/>
                             <constraint firstItem="b0j-qi-lRM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tq1-3f-GdC"/>
+                            <constraint firstItem="MKF-BJ-EPz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xJu-Vg-i7h"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -95,7 +96,7 @@
                         <outlet property="forwardButton" destination="0g9-z5-Df5" id="yZu-GD-Q52"/>
                         <outlet property="menuButton" destination="5cP-pZ-KXS" id="XXh-t9-vNO"/>
                         <outlet property="menuContainer" destination="b0j-qi-lRM" id="4EC-Rs-Mo6"/>
-                        <outlet property="progressView" destination="ofs-6h-xce" id="myU-1e-fIT"/>
+                        <outlet property="progressView" destination="MKF-BJ-EPz" id="zag-CX-PYu"/>
                         <outlet property="reloadButton" destination="qIz-Os-YNk" id="6E0-I2-sdk"/>
                     </connections>
                 </viewController>
@@ -219,7 +220,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-zb-rda">
                                                     <rect key="frame" x="8" y="8" width="517" height="49"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

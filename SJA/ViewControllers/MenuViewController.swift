@@ -19,7 +19,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topics = ["Test", "Class", "Crime", "Education", "Feminism","Race",  "Sexism", "Spectrum", "Wellness"]
+        topics = ["Class", "Crime", "Education", "Feminism","Race",  "Sexism", "Spectrum", "Wellness"]
         
         tableView.dataSource = self
     }
@@ -54,7 +54,7 @@ extension MenuViewController: UITableViewDataSource {
         
         if viewName == "View Controller"{
             viewName = "Topic"
-            var source = self.parentViewController as! ViewController
+            var source = self.parentViewController as! ArticleViewController
             source.menuContainer.hidden = true
             viewName = "Topic"
         }

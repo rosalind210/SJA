@@ -2,113 +2,262 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Test</key>
-	<array>
-		<string>http://blackgirldangerous.org/category/gender/feed/</string>
-	</array>
 	<key>Class</key>
-	<array>
-		<string>http://theguardian.com/business/diversity-and-equality/rss</string>
-		<string>http://www.salon.com/topic/class/feed/</string>
-		<string>http://feministing.com/tag/gender-gap/feed/</string>
-		<string>http://feministing.com/tag/white-privilege/feed/</string>
-		<string>http://feministing.com/tag/class/feed/</string>
-		<string>http://everydayfeminism.com/tag/class/feed/</string>
-		<string>http://everydayfeminism.com/tag/work/feed/</string>
-		<string>http://blogher.com/taxonomy/term/25/feed</string>
-	</array>
+	<dict>
+		<key>Blog Her</key>
+		<array>
+			<string>http://blogher.com/taxonomy/term/25/feed</string>
+		</array>
+		<key>Everyday Feminism</key>
+		<array>
+			<string>http://everydayfeminism.com/tag/work/feed/</string>
+			<string>http://everydayfeminism.com/tag/class/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/class/feed/</string>
+			<string>http://feministing.com/tag/white-privilege/feed/</string>
+			<string>http://feministing.com/tag/gender-gap/feed/</string>
+		</array>
+		<key>The Guardian</key>
+		<array>
+			<string>http://theguardian.com/business/diversity-and-equality/rss</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/class/feed/</string>
+		</array>
+	</dict>
 	<key>Crime</key>
-	<array>
-		<string>http://feeds.huffingtonpost.com/c/35496/f/677054/index.rss</string>
-		<string>http://truthvoice.com/category/descent-into-tyranny/feed/</string>
-		<string>http://truthvoice.com/category/police-brutality/feed/</string>
-		<string>http://truthvoice.com/category/war-on-drugs/feed/</string>
-		<string>http://truthvoice.com/category/state-corruption/feed/</string>
-		<string>http://feministing.com/tag/criminal-justice-system/feed/</string>
-		<string>http://feministing.com/tag/incarceration/feed/</string>
-		<string>http://latimes.com/local/crime/rss2.0.xml</string>
-		<string>http://businessinsider.com/law/rss</string>
-		<string>http://feministing.com/tag/hate-crimes/feed/</string>
-	</array>
+	<dict>
+		<key>Business Insider</key>
+		<array>
+			<string>http://businessinsider.com/law/rss</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/criminal-justice-system/feed/</string>
+			<string>http://feministing.com/tag/incarceration/feed/</string>
+			<string>http://feministing.com/tag/hate-crimes/feed/</string>
+		</array>
+		<key>Huffington Post</key>
+		<array>
+			<string>http://feeds.huffingtonpost.com/c/35496/f/677054/index.rss</string>
+		</array>
+		<key>LA TImes</key>
+		<array>
+			<string>http://latimes.com/local/crime/rss2.0.xml</string>
+		</array>
+		<key>Truth Voice</key>
+		<array>
+			<string>http://truthvoice.com/category/descent-into-tyranny/feed/</string>
+			<string>http://truthvoice.com/category/police-brutality/feed/</string>
+			<string>http://truthvoice.com/category/war-on-drugs/feed/</string>
+			<string>http://truthvoice.com/category/state-corruption/feed/</string>
+		</array>
+	</dict>
 	<key>Education</key>
-	<array>
-		<string>http://businessinsider.com/education/rss</string>
-		<string>http://www.salon.com/topic/education/feed/</string>
-		<string>http://latimes.com/local/education/rss2.0.xml</string>
-		<string>http://blackgirldangerous.org/category/education/feed/</string>
-		<string>http://npr.org/rss/rss.php?id=1013</string>
-		<string>http://feministing.com/tag/education/feed/</string>
-		<string>http://pinknews.co.uk/current-affairs/education/feed/</string>
-	</array>
+	<dict>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/education/feed/</string>
+		</array>
+		<key>Business Insider</key>
+		<array>
+			<string>http://businessinsider.com/education/rss</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/education/feed/</string>
+		</array>
+		<key>LA Times</key>
+		<array>
+			<string>http://latimes.com/local/education/rss2.0.xml</string>
+		</array>
+		<key>NPR</key>
+		<array>
+			<string>http://npr.org/rss/rss.php?id=1013</string>
+		</array>
+		<key>Pink News</key>
+		<array>
+			<string>http://pinknews.co.uk/current-affairs/education/feed/</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/education/feed/</string>
+		</array>
+	</dict>
 	<key>Feminism</key>
-	<array>
-		<string>http://everydayfeminism.com/tag/fem101/feed/</string>
-		<string>http://www.salon.com/topic/feminism/feed/</string>
-		<string>http://blackgirldangerous.org/category/feminism/feed/</string>
-		<string>http://feministing.com/tag/feminism/feed/</string>
-		<string>http://feministing.com/tag/male-allies/feed/</string>
-		<string>http://blogher.com/blogher-topics/news-politics/feminism/feed/</string>
-		<string>http://advocate.com/women/feed/</string>
-	</array>
+	<dict>
+		<key>Advocate</key>
+		<array>
+			<string>http://advocate.com/women/feed/</string>
+		</array>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/feminism/feed/</string>
+		</array>
+		<key>Blog Her</key>
+		<array>
+			<string>http://blogher.com/blogher-topics/news-politics/feminism/feed/</string>
+		</array>
+		<key>Everyday Feminism</key>
+		<array>
+			<string>http://everydayfeminism.com/tag/fem101/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/feminism/feed/</string>
+			<string>http://feministing.com/tag/male-allies/feed/</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/feminism/feed/</string>
+		</array>
+	</dict>
 	<key>Race</key>
-	<array>
-		<string>http://blackgirldangerous.org/category/race/feed/</string>
-		<string>http://www.salon.com/topic/race/feed/</string>
-		<string>http://feministing.com/tag/racism/feed/</string>
-		<string>http://blavity.com/category/black-history/feed/</string>
-		<string>http://truthvoice.com/tag/racism/feed/</string>
-		<string>http://feministing.com/tag/cultural-appropriation/feed/</string>
-		<string>http://feeds.huffingtonpost.com/c/35496/f/677047/index.rss</string>
-		<string>http://feministing.com/tag/race/feed/</string>
-		<string>http://npr.org/rss/rss.php?id=1015</string>
-		<string>http://blavity.com/category/culture/race-identity/feed/</string>
-		<string>http://theguardian.com/world/race/rss</string>
-		<string>http://blavity.com/category/news/feed/</string>
-		<string>http://feministing.com/tag/microaggressions/feed/</string>
-		<string>http://everydayfeminism.com/tag/race-ethnicity/feed/</string>
-		<string>http://blavity.com/category/life-style/feed/</string>
-	</array>
+	<dict>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/race/feed/</string>
+		</array>
+		<key>Blavity</key>
+		<array>
+			<string>http://blavity.com/category/black-history/feed/</string>
+			<string>http://blavity.com/category/culture/race-identity/feed/</string>
+			<string>http://blavity.com/category/life-style/feed/</string>
+			<string>http://blavity.com/category/news/feed/</string>
+		</array>
+		<key>Everyday Feminism</key>
+		<array>
+			<string>http://everydayfeminism.com/tag/race-ethnicity/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/racism/feed/</string>
+			<string>http://feministing.com/tag/race/feed/</string>
+			<string>http://feministing.com/tag/microaggressions/feed/</string>
+			<string>http://feministing.com/tag/cultural-appropriation/feed/</string>
+		</array>
+		<key>The Guardian</key>
+		<array>
+			<string>http://theguardian.com/world/race/rss</string>
+		</array>
+		<key>Huffington Post</key>
+		<array>
+			<string>http://feeds.huffingtonpost.com/c/35496/f/677047/index.rss</string>
+		</array>
+		<key>NPR</key>
+		<array>
+			<string>http://npr.org/rss/rss.php?id=1015</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/race/feed/</string>
+		</array>
+		<key>Truth Voice</key>
+		<array>
+			<string>http://truthvoice.com/tag/racism/feed/</string>
+		</array>
+	</dict>
 	<key>Sexism</key>
-	<array>
-		<string>http://blackgirldangerous.org/category/sexism/feed/</string>
-		<string>http://www.salon.com/topic/sexism/feed/</string>
-		<string>http://feministing.com/tag/sexism/feed/</string>
-		<string>http://feministing.com/tag/masculinity/feed/</string>
-		<string>http://feministing.com/tag/mansplaining/feed/</string>
-		<string>http://feeds.huffingtonpost.com/c/35496/f/677100/index.rss</string>
-		<string>http://theguardian.com/lifeandstyle/women/rss</string>
-	</array>
+	<dict>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/sexism/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/sexism/feed/</string>
+			<string>http://feministing.com/tag/masculinity/feed/</string>
+			<string>http://feministing.com/tag/mansplaining/feed/</string>
+		</array>
+		<key>The Guardian</key>
+		<array>
+			<string>http://theguardian.com/lifeandstyle/women/rss</string>
+		</array>
+		<key>Huffington Post</key>
+		<array>
+			<string>http://feeds.huffingtonpost.com/c/35496/f/677100/index.rss</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/sexism/feed/</string>
+		</array>
+	</dict>
 	<key>Spectrum</key>
-	<array>
-		<string>http://www.salon.com/topic/lgbt/feed/</string>
-		<string>http://blackgirldangerous.org/category/transgender/feed/</string>
-		<string>http://blackgirldangerous.org/category/queer/feed/</string>
-		<string>http://blackgirldangerous.org/category/gender/feed/</string>
-		<string>http://everydayfeminism.com/tag/gender/feed/</string>
-		<string>http://everydayfeminism.com/tag/lgbtqia/feed/</string>
-		<string>http://feeds.huffingtonpost.com/c/35496/f/677065/index.rss</string>
-		<string>http://feministing.com/tag/transgender-issues/feed/</string>
-		<string>http://feministing.com/tag/lgbt-issues/feed/</string>
-		<string>http://feministing.com/tag/gender/feed/</string>
-		<string>http://pinknews.co.uk/uk-news/feed/</string>
-		<string>http://pinknews.co.uk/us-news/feed/</string>
-		<string>http://pinknews.co.uk/world-news/feed/</string>
-		<string>http://pinknews.co.uk/community/trans/feed/</string>
-		<string>http://advocate.com/transgender/feed/</string>
-		<string>http://advocate.com/bisexuality/feed/</string>
-		<string>http://advocate.com/pride/feed/</string>
-		<string>http://blogher.com/taxonomy/term/106909/feed/</string>
-		<string>http://buzzfeed.com/lgbt.xml</string>
-	</array>
+	<dict>
+		<key>Advocate</key>
+		<array>
+			<string>http://advocate.com/bisexuality/feed/</string>
+			<string>http://advocate.com/transgender/feed/</string>
+			<string>http://advocate.com/pride/feed/</string>
+		</array>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/transgender/feed/</string>
+			<string>http://blackgirldangerous.org/category/queer/feed/</string>
+			<string>http://blackgirldangerous.org/category/gender/feed/</string>
+		</array>
+		<key>Blog Her</key>
+		<array>
+			<string>http://blogher.com/taxonomy/term/106909/feed/</string>
+		</array>
+		<key>Buzzfeed</key>
+		<array>
+			<string>http://buzzfeed.com/lgbt.xml</string>
+		</array>
+		<key>Everyday Feminism</key>
+		<array>
+			<string>http://everydayfeminism.com/tag/gender/feed/</string>
+			<string>http://everydayfeminism.com/tag/lgbtqia/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/transgender-issues/feed/</string>
+			<string>http://feministing.com/tag/lgbt-issues/feed/</string>
+			<string>http://feministing.com/tag/gender/feed/</string>
+		</array>
+		<key>Huffington Post</key>
+		<array>
+			<string>http://feeds.huffingtonpost.com/c/35496/f/677065/index.rss</string>
+		</array>
+		<key>Pink News</key>
+		<array>
+			<string>http://pinknews.co.uk/uk-news/feed/</string>
+			<string>http://pinknews.co.uk/us-news/feed/</string>
+			<string>http://pinknews.co.uk/world-news/feed/</string>
+			<string>http://pinknews.co.uk/community/trans/feed/</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/lgbt/feed/</string>
+		</array>
+	</dict>
 	<key>Wellness</key>
-	<array>
-		<string>http://blackgirldangerous.org/category/wellness/feed/</string>
-		<string>http://www.salon.com/topic/mental-illness/feed/</string>
-		<string>http://blackgirldangerous.org/category/mental-health/feed/</string>
-		<string>http://everydayfeminism.com/tag/health-body/feed/</string>
-		<string>http://feministing.com/tag/mental-health/feed/</string>
-		<string>http://feministing.com/tag/body-image/feed/</string>
-		<string>http://blogher.com/blogher-topics/health/mental-health/feed</string>
-	</array>
+	<dict>
+		<key>Black Girl Dangerous</key>
+		<array>
+			<string>http://blackgirldangerous.org/category/wellness/feed/</string>
+			<string>http://blackgirldangerous.org/category/mental-health/feed/</string>
+		</array>
+		<key>Blog Her</key>
+		<array>
+			<string>http://blogher.com/blogher-topics/health/mental-health/feed</string>
+		</array>
+		<key>Everyday Feminism</key>
+		<array>
+			<string>http://everydayfeminism.com/tag/health-body/feed/</string>
+		</array>
+		<key>Feministing</key>
+		<array>
+			<string>http://feministing.com/tag/mental-health/feed/</string>
+			<string>http://feministing.com/tag/body-image/feed/</string>
+		</array>
+		<key>Salon</key>
+		<array>
+			<string>http://salon.com/topic/mental-illness/feed/</string>
+		</array>
+	</dict>
 </dict>
 </plist>

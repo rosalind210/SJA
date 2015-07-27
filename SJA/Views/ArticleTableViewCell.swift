@@ -12,7 +12,7 @@ import UIKit
 class ArticleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var articleName: UILabel!
-    @IBOutlet weak var articleSource: UILabel!
+    //@IBOutlet weak var articleSource: UILabel!
     
     
     var link = ""

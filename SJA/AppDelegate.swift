@@ -25,13 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if let dict = sourcesDict {
-            let topicArray = dict.allKeys as! [String] //get an array of the keys
+            //get topic
+            let topicArray = dict.allKeys as! [String]
             let numForTopic = Int(arc4random_uniform(UInt32(topicArray.count))) //get random number between 0 and the number of keys
-            let topic = topicArray[numForTopic] //get the topic from the array
+            let topic = topicArray[numForTopic]
+            let topicDict = dict[topic] as! NSDictionary //get the topic from the array
             
-            let feeds = dict[topic] as! [String]
+            //get website
+            let webArray = topicDict.allKeys as! [String]
+            let numForWeb = Int(arc4random_uniform(UInt32(webArray.count)))
+            let website = webArray[numForWeb]
             
             //get feed
+            let feeds = topicDict[website] as! [String]
             let randomFeed = Int(arc4random_uniform(UInt32(feeds.count)))
             let feed = feeds[randomFeed]
             let feedUrls = FeedHelper(givenURL: feed)
@@ -43,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Change status bar to white
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
         return true
     }
 

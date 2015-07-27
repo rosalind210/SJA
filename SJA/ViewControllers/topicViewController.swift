@@ -9,26 +9,18 @@
 import UIKit
 
 class TopicViewController: UIViewController {
-
-    
-    @IBOutlet weak var articleTableView: UITableView!
     
     
+    @IBOutlet weak var websiteListTableView: UITableView!
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var currentTopic: String?
-    var feedArray: [String] = []
-    
-    var delegate: FeedCollectorDelegate! = nil
-    
-    var feedCollector: FeedCollector?
-    
-    var item: MWFeedItem?
+    var websites: NSDictionary?
+    var websiteArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(currentTopic!)
         self.title = currentTopic
                 
         // Take out range of topic view controllers in between current and main
@@ -46,17 +38,16 @@ class TopicViewController: UIViewController {
             sourcesDict = NSDictionary(contentsOfFile: path)
         }
         if let dict = sourcesDict {
-            feedArray = dict[currentTopic!] as! Array //casts plist array to array of strings
-            println("Point A")
-            feedCollector = FeedCollector(listOfURLs: feedArray)
-            println("Point B")
+            websites = dict[currentTopic!] as? NSDictionary
+            websiteArray = websites!.allKeys as! [String]
+            websiteArray.sort { $0 < $1 }
         }
         
-        articleTableView.dataSource = self
-        articleTableView.delegate = self
+        websiteListTableView.dataSource = self
+        websiteListTableView.delegate = self
         menuContainer.hidden = true
         
-        feedCollector?.createFeedHelpers()
+        //feedCollector?.createFeedHelpers()
 
     }
     
@@ -64,9 +55,6 @@ class TopicViewController: UIViewController {
         super.viewWillAppear(animated)
         
         menuContainer.hidden = true
-        
-        
-        self.articleTableView.reloadData()
     }
         
     override func didReceiveMemoryWarning() {
@@ -85,10 +73,10 @@ class TopicViewController: UIViewController {
     // segue to aricleviewcontroller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if (segue.identifier == "ArticleClick") {
-                let destVC = segue.destinationViewController as! ArticleViewController
-                let cell = sender as! ArticleTableViewCell
-                destVC.chosenArticle = cell.link
-                destVC.articleTitle = cell.articleName.text
+                let destVC = segue.destinationViewController as! ArticleListViewController
+                let cell = sender as! WebsiteTableViewCell
+                destVC.chosenWebsite = cell.website
+                destVC.websiteDict = cell.websiteDictionary
         }
     }
     
@@ -97,22 +85,18 @@ class TopicViewController: UIViewController {
 extension TopicViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("WebsiteNameCell", forIndexPath: indexPath) as! WebsiteTableViewCell
         
-        item = feedCollector!.feedItems[indexPath.row] as MWFeedItem
-        println(item!.link)
-        
-        cell.link = item!.link
-        
-        cell.articleName.text = item!.title
-        //cell.articleSource.text =
-        
+        let row = indexPath.row
+        cell.website = websiteArray[row]
+        cell.websiteDictionary = websites[cell.website]
+        cell.websiteLabel.text = cell.website
         return cell
     }
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedCollector!.feedItems.count
+        return websiteArray.count
     }
     
 }

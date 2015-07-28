@@ -39,7 +39,7 @@ class FeedHelper: MWFeedParser, MWFeedParserDelegate {
 
     
     func feedParser(parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
-        println("Item loaded")
+        //println("Item loaded")
         feedItems.append(item)
     }
     

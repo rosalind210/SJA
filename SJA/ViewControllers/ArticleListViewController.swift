@@ -27,15 +27,6 @@ class ArticleListViewController: UIViewController {
         
         self.title = chosenWebsite
         
-        // Take out range of topic view controllers in between current and main
-        if let navigationController = navigationController {
-            var navControllers = navigationController.viewControllers
-            if navControllers.count > 2 {
-                navControllers.removeRange(1..<(navControllers.count - 1))
-                navigationController.viewControllers = navControllers
-            }
-        }
-        
         //read through sources dictionary from supporting files
         if let dict = websiteDict {
             feedArray = websiteDict![chosenWebsite!] as! [String]
@@ -46,6 +37,7 @@ class ArticleListViewController: UIViewController {
         articleListTableView.delegate = self
         menuContainer.hidden = true
         
+
         feedCollector?.createFeedHelpers()
     }
 
@@ -53,6 +45,9 @@ class ArticleListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    override func viewWillDisappear(animated: Bool) {
+//    }
     
     @IBAction func menuAction() {
         if menuContainer!.hidden {
@@ -81,7 +76,6 @@ extension ArticleListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleNameCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
         item = feedCollector!.feedItems[indexPath.row] as MWFeedItem
-        println(item!.link)
         
         cell.link = item!.link
         

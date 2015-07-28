@@ -12,7 +12,7 @@ class WebsiteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var websiteLabel: UILabel!
     
-    var website = ""
+    var website:String = ""
     var websiteDictionary: NSDictionary?
     
     override func awakeFromNib() {

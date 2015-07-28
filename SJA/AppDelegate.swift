@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //get article from feed
             let randomArticle = Int(arc4random_uniform(UInt32(feedUrls.feedItems.count)))
             url = feedUrls.feedItems[randomArticle].link
-            println(url)
         }
         
         // Change status bar to white

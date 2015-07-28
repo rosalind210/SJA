@@ -72,7 +72,7 @@ class TopicViewController: UIViewController {
     
     // segue to aricleviewcontroller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if (segue.identifier == "ArticleClick") {
+            if (segue.identifier == "WebsiteClick") {
                 let destVC = segue.destinationViewController as! ArticleListViewController
                 let cell = sender as! WebsiteTableViewCell
                 destVC.chosenWebsite = cell.website
@@ -89,7 +89,7 @@ extension TopicViewController: UITableViewDataSource {
         
         let row = indexPath.row
         cell.website = websiteArray[row]
-        cell.websiteDictionary = websites[cell.website]
+        cell.websiteDictionary = websites
         cell.websiteLabel.text = cell.website
         return cell
     }

@@ -36,18 +36,14 @@ class FeedCollector {
             var url = feedArray[i]
             
             var feed = FeedHelper(givenURL: url)
-            //println(feed.feedItems)
             addFeedItems(feed)
-            println("Feed finished \(i)")
+            //println("Feed finished \(i)")
         }
         
     }
     
     func addFeedItems(feed: FeedHelper) {
         for i in feed.feedItems {
-//            println(i)
-//            println(i.link)
-//            println()
             feedItems.append(i)
         }
     }

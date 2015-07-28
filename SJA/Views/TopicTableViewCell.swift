@@ -13,6 +13,6 @@ class TopicTableViewCell: UITableViewCell {
     
     @IBOutlet weak var topicLabel: UILabel!
     
-    var website = ""
+    var website:String = ""
 }
     

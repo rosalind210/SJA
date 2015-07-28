@@ -162,8 +162,8 @@
 			children = (
 				6314919A1B56FA24004F88F0 /* MenuViewController.swift */,
 				631491A01B5701B9004F88F0 /* TopicViewController.swift */,
-				6346A3C51B57196800B41C6B /* ArticleViewController.swift */,
 				63AAEE371B66C787008F90AC /* ArticleListViewController.swift */,
+				6346A3C51B57196800B41C6B /* ArticleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

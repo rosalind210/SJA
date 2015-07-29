@@ -10,8 +10,7 @@ import WebKit
 
 class ArticleViewController: UIViewController {
     
-    var webView: WKWebView! //for displaying web content
-    @IBOutlet weak var blurView: UIVisualEffectView!
+    var webView: WKWebView!  = WKWebView()
     var chosenArticle: String?
     var articleTitle: String?
     
@@ -19,6 +18,9 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var forwardButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var progressView: UIProgressView!
+
+    //var blurEffect: BlurEffectView!
+    var blurEffect = UIVisualEffectView()
     
     //FOR RANDOM ARTICLE
     @IBOutlet weak var menuContainer: UIView!
@@ -26,12 +28,13 @@ class ArticleViewController: UIViewController {
     
     // initializes webView with frame size zero
     required init(coder aDecoder: NSCoder) {
-        self.webView = WKWebView(frame: CGRectZero)
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        webView = WKWebView(frame: CGRectZero)
         
         if articleTitle != nil {
             self.title = articleTitle
@@ -60,23 +63,35 @@ class ArticleViewController: UIViewController {
             webView.loadRequest(requestObj)
         }
         
-        if menuContainer != nil {
-            menuContainer.hidden = true
-        }
-        
-        //buttons are definitely not enabled
-        backButton.enabled = false
-        forwardButton.enabled = false
-        
+//        if menuContainer != nil {
+//            menuContainer.hidden = true
+//        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //blurEffect = BlurEffectView(view: view)
+        blurEffect = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+        blurEffect.frame = view.bounds
+        webView.addSubview(blurEffect)
+        blurEffect.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
         // hides navigation bar when scrolling
         //navigationController?.hidesBarsOnSwipe = true
         
+        //buttons are definitely not enabled
+        backButton.enabled = false
+        forwardButton.enabled = false
+        
         //observers
         webView.addObserver(self, forKeyPath: "loading", options: .New, context: nil)
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+        
+        if menuContainer != nil {
+            menuContainer.hidden = true
+        }
+
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -86,8 +101,10 @@ class ArticleViewController: UIViewController {
         //webView.setDelegate = nil
         progressView.removeFromSuperview()
         
+        //hide the menu and blur after pressing topic
         if menuContainer != nil {
             menuContainer.hidden = true
+            blurEffect.hidden = true
         }
     }
     
@@ -118,10 +135,10 @@ class ArticleViewController: UIViewController {
     @IBAction func menuAction() {
         if menuContainer!.hidden {
             menuContainer!.hidden = false
-            blurView.hidden = false
+            blurEffect.hidden = false
         } else {
             menuContainer!.hidden = true
-            blurView.hidden = true
+            blurEffect.hidden = true
         }
     }
 

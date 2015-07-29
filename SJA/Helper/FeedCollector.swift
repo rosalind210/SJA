@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-protocol FeedCollectorDelegate {
-    func refreshTableView(tableView: UITableView)
-}
 
 class FeedCollector {
     
@@ -24,8 +21,6 @@ class FeedCollector {
         feedArray = listOfURLs
 //        createFeedHelpers()
     }
-    
-    var delegate:FeedCollectorDelegate! = nil
     
     func refreshTableView(tableView: UITableView){
         tableView.reloadData()

@@ -22,6 +22,8 @@ class ArticleListViewController: UIViewController {
     var feedCollector: FeedCollector?
     var item: MWFeedItem?
     
+    var blurEffect: BlurEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +46,12 @@ class ArticleListViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+//        blurEffect = BlurEffectView(view: view)
+//        view.addSubview(blurEffect)
+//        blurEffect.hidden = true
     }
     
 //    override func viewWillDisappear(animated: Bool) {

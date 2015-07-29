@@ -46,9 +46,6 @@ class TopicViewController: UIViewController {
         websiteListTableView.dataSource = self
         websiteListTableView.delegate = self
         menuContainer.hidden = true
-        
-        //feedCollector?.createFeedHelpers()
-
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -97,6 +94,10 @@ extension TopicViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return websiteArray.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        websiteListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

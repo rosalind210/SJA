@@ -66,6 +66,7 @@ class ArticleListViewController: UIViewController {
             let cell = sender as! ArticleTableViewCell
             destVC.chosenArticle = cell.link
             destVC.articleTitle = cell.articleName.text
+            
         }
     }
 
@@ -84,9 +85,12 @@ extension ArticleListViewController: UITableViewDataSource {
         return cell
     }
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return feedCollector!.feedItems.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        articleListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

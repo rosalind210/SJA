@@ -22,7 +22,7 @@ class ArticleListViewController: UIViewController {
     var feedCollector: FeedCollector?
     var item: MWFeedItem?
     
-    var blurEffect: BlurEffectView!
+    var blurEffect = UIVisualEffectView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +39,30 @@ class ArticleListViewController: UIViewController {
         articleListTableView.delegate = self
         menuContainer.hidden = true
         
-
-        feedCollector?.createFeedHelpers()
+        backgroundThread(background: {
+            //in the background
+            self.feedCollector?.createFeedHelpers()
+//            NSNotification(name: "Loading Screen", object: <#AnyObject?#>)
+        }, completion: {
+            //when done
+            self.articleListTableView.reloadData()
+        });
+        
     }
+    
+    //var alert: UIAlertView = UIAlertView(title: "Title", message: "Please wait...", delegate: nil, cancelButtonTitle: "Cancel");
+//    var alert = UIAlertView()
+//    var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+//    loadingIndicator.center = self.view.center;
+//    loadingIndicator.hidesWhenStopped = true
+//    loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//    loadingIndicator.startAnimating();
+//    
+//    alert.setValue(loadingIndicator, forKey: "accessoryView")
+//    loadingIndicator.startAnimating()
+//    
+//    alert.show();
+//    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,19 +70,19 @@ class ArticleListViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-//        blurEffect = BlurEffectView(view: view)
-//        view.addSubview(blurEffect)
-//        blurEffect.hidden = true
+        blurEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight)) as UIVisualEffectView
+        blurEffect.frame = self.view.bounds
+        self.view.insertSubview(blurEffect, aboveSubview: articleListTableView)
+        blurEffect.hidden = true
     }
-    
-//    override func viewWillDisappear(animated: Bool) {
-//    }
     
     @IBAction func menuAction() {
         if menuContainer!.hidden {
             menuContainer!.hidden = false
+            blurEffect.hidden = false
         } else {
             menuContainer!.hidden = true
+            blurEffect.hidden = true
         }
     }
 

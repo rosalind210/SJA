@@ -10,18 +10,24 @@ import UIKit
 
 class BlurEffectView: UIVisualEffectView {
     
-//    var blurView = UIVisualEffectView()
+    var blurView = UIVisualEffectView()
+    //blur = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light))
+    
+//    init(effect: UIVisualEffect) {
+//        
+//    }
+    
+//    init(view: UIView) {
+//        //initializes with light blur
+//        //super.init(effect: UIBlurEffect(style: .Light))
+//        
+//        frame(view)
+//    }
 //    
 //    required init(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
 //    }
 //    
-//    init(view: UIView) {
-//        //initializes with light blur
-//        super.init(effect: UIBlurEffect(style: .Light))
-//        
-//        frame(view)
-//    }
 //    
 //    func frame(view: UIView) {
 //        blurView.frame = view.bounds

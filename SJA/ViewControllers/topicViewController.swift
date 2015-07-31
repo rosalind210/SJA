@@ -18,6 +18,8 @@ class TopicViewController: UIViewController {
     var currentTopic: String?
     var websites: NSDictionary?
     var websiteArray: [String] = []
+    
+    var blurEffect = UIVisualEffectView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,11 @@ class TopicViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        blurEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight)) as UIVisualEffectView
+        blurEffect.frame = self.view.bounds
+        self.view.insertSubview(blurEffect, aboveSubview: websiteListTableView)
+        blurEffect.hidden = true
+        
         menuContainer.hidden = true
     }
         
@@ -62,14 +69,17 @@ class TopicViewController: UIViewController {
     @IBAction func menuAction() {
         if menuContainer!.hidden {
             menuContainer!.hidden = false
+            blurEffect.hidden = false
         } else {
             menuContainer!.hidden = true
+            blurEffect.hidden = true
         }
     }
     
     // segue to aricleviewcontroller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if (segue.identifier == "WebsiteClick") {
+                //alert()
                 let destVC = segue.destinationViewController as! ArticleListViewController
                 let cell = sender as! WebsiteTableViewCell
                 destVC.chosenWebsite = cell.website
@@ -88,6 +98,7 @@ extension TopicViewController: UITableViewDataSource {
         cell.website = websiteArray[row]
         cell.websiteDictionary = websites
         cell.websiteLabel.text = cell.website
+        
         return cell
     }
 

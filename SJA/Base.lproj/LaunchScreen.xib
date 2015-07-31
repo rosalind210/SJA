@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,27 +18,39 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="voices" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="48" width="441" height="43"/>
+                    <rect key="frame" x="20" y="342" width="441" height="43"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="43" id="pJR-JE-w6u"/>
+                        <constraint firstAttribute="height" constant="43" id="juj-5W-5tN"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="36"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="V" translatesAutoresizingMaskIntoConstraints="NO" id="fqT-kc-je2">
+                    <rect key="frame" x="91" y="69" width="298" height="265"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fqT-kc-je2" secondAttribute="height" multiplier="366:325" id="9g8-uV-VDs"/>
+                        <constraint firstAttribute="width" constant="298" id="Pdw-Jq-8Ga"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.43137254901960786" green="0.25490196078431371" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="fqT-kc-je2" secondAttribute="bottom" constant="8" symbolic="YES" id="Fxh-H7-S0A"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="OCy-Xc-nd5"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="fqT-kc-je2" secondAttribute="centerX" id="Xqn-GE-Ywf"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" id="dbY-aG-E4l"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="8ie-xW-0ye" secondAttribute="leading" id="tNf-nF-xUq"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="8ie-xW-0ye" secondAttribute="leading" id="cpV-yp-yRw"/>
+                <constraint firstItem="fqT-kc-je2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-38.5" id="gx0-lr-SeJ"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" id="hTe-9s-apy"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="V" width="366" height="325"/>
+    </resources>
 </document>

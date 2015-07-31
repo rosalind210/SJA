@@ -199,6 +199,10 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
+                                <rect key="frame" x="290" y="290" width="37" height="37"/>
+                                <color key="color" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-EL-zD4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,11 +247,13 @@
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="height" secondItem="KNt-XT-550" secondAttribute="height" id="0Vt-ye-jCO"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" multiplier="1:2" id="bEg-je-Jle"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="top" secondItem="KNt-XT-550" secondAttribute="topMargin" id="f4P-oP-IK7"/>
+                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="leading" secondItem="KNt-XT-550" secondAttribute="leading" constant="290" id="kAI-Th-He3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W6V-cE-Pt7" secondAttribute="trailing" constant="-16" id="pt0-N9-YMD"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="leading" secondItem="KNt-XT-550" secondAttribute="leading" id="qgW-JM-CP7"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="bottom" secondItem="cUO-Kt-xlE" secondAttribute="top" id="tB7-68-js2"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" id="vj0-dJ-v1A"/>
                             <constraint firstItem="cUO-Kt-xlE" firstAttribute="top" secondItem="W6V-cE-Pt7" secondAttribute="bottom" id="x2N-fi-zhw"/>
+                            <constraint firstItem="cUO-Kt-xlE" firstAttribute="top" secondItem="ZQP-8O-Pkw" secondAttribute="bottom" constant="273" id="yPa-xK-3bA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OyS-PW-6jr">
@@ -258,6 +264,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZQP-8O-Pkw" id="fiE-q9-GcJ"/>
                         <outlet property="articleListTableView" destination="DfA-EL-zD4" id="wp5-JY-ECk"/>
                         <outlet property="menuButton" destination="ilp-jh-fhQ" id="kgo-Va-LjY"/>
                         <outlet property="menuContainer" destination="W6V-cE-Pt7" id="R6K-Ro-aen"/>
@@ -412,7 +419,7 @@
         <image name="Menu" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eMt-LW-jxb"/>
+        <segue reference="2yM-si-D3B"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

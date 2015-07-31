@@ -15,6 +15,7 @@ class ArticleListViewController: UIViewController {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var chosenWebsite: String?
     var websiteDict: NSDictionary?
     var feedArray: [String] = []
@@ -27,6 +28,8 @@ class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        articleListTableView.hidden = true
+        activityIndicator.startAnimating()
         self.title = chosenWebsite
         
         //read through sources dictionary from supporting files
@@ -42,27 +45,15 @@ class ArticleListViewController: UIViewController {
         backgroundThread(background: {
             //in the background
             self.feedCollector?.createFeedHelpers()
-//            NSNotification(name: "Loading Screen", object: <#AnyObject?#>)
         }, completion: {
             //when done
             self.articleListTableView.reloadData()
+            self.activityIndicator.stopAnimating()
+            self.articleListTableView.hidden = false
         });
         
     }
     
-    //var alert: UIAlertView = UIAlertView(title: "Title", message: "Please wait...", delegate: nil, cancelButtonTitle: "Cancel");
-//    var alert = UIAlertView()
-//    var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
-//    loadingIndicator.center = self.view.center;
-//    loadingIndicator.hidesWhenStopped = true
-//    loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-//    loadingIndicator.startAnimating();
-//    
-//    alert.setValue(loadingIndicator, forKey: "accessoryView")
-//    loadingIndicator.startAnimating()
-//    
-//    alert.show();
-//    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

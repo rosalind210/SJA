@@ -13,13 +13,10 @@ import UIKit
 class FeedCollector {
     
     var feedArray: [String] = []
-   // var randomArticle: String
-    //var feedItemArray = [FeedHelper]()
     var feedItems = [MWFeedItem]()
     
     init(listOfURLs: [String]) {
         feedArray = listOfURLs
-//        createFeedHelpers()
     }
     
     func refreshTableView(tableView: UITableView){

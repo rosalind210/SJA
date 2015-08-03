@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6314916D1B56CD1D004F88F0"
-               BuildableName = "SJA.app"
+               BuildableName = "Voices.app"
                BlueprintName = "SJA"
                ReferencedContainer = "container:SJA.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6314916D1B56CD1D004F88F0"
-            BuildableName = "SJA.app"
+            BuildableName = "Voices.app"
             BlueprintName = "SJA"
             ReferencedContainer = "container:SJA.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6314916D1B56CD1D004F88F0"
-            BuildableName = "SJA.app"
+            BuildableName = "Voices.app"
             BlueprintName = "SJA"
             ReferencedContainer = "container:SJA.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6314916D1B56CD1D004F88F0"
-            BuildableName = "SJA.app"
+            BuildableName = "Voices.app"
             BlueprintName = "SJA"
             ReferencedContainer = "container:SJA.xcodeproj">
          </BuildableReference>

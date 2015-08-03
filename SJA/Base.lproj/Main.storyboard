@@ -66,8 +66,13 @@
                                     <segue destination="WJC-NP-En0" kind="embed" id="eMt-LW-jxb"/>
                                 </connections>
                             </containerView>
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-E7-NCk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97768193767344602" green="1" blue="0.98742482202778448" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="b0j-qi-lRM" secondAttribute="trailing" constant="-16" id="26X-Dk-TYI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MKF-BJ-EPz" secondAttribute="trailing" constant="-16" id="6m8-Ju-kRb"/>
@@ -88,6 +93,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bZc-sG-qLG">
+                        <barButtonItem key="leftBarButtonItem" image="Random" id="Sqh-1G-NCP">
+                            <connections>
+                                <action selector="getRandomArticle" destination="BYZ-38-t0r" id="4tW-0C-zS4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu" id="5cP-pZ-KXS" userLabel="MenuButton">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -101,6 +111,7 @@
                         <outlet property="menuButton" destination="5cP-pZ-KXS" id="XXh-t9-vNO"/>
                         <outlet property="menuContainer" destination="b0j-qi-lRM" id="4EC-Rs-Mo6"/>
                         <outlet property="progressView" destination="MKF-BJ-EPz" id="zag-CX-PYu"/>
+                        <outlet property="randomButton" destination="Sqh-1G-NCP" id="bCN-BF-bSU"/>
                         <outlet property="reloadButton" destination="qIz-Os-YNk" id="764-Sg-2Nv"/>
                     </connections>
                 </viewController>
@@ -146,6 +157,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.46274509803921571" green="0.27058823529411763" blue="0.54117647058823526" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons accredited to icons8.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCF-Vz-K5V">
+                                    <rect key="frame" x="0.0" y="503" width="300" height="33"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="LZa-05-MqX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" id="TAU-qe-Y4b" customClass="TopicTableViewCell" customModule="Voices" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
@@ -202,8 +223,8 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
-                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
+                                <rect key="frame" x="282" y="261" width="37" height="37"/>
                                 <color key="color" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-cE-Pt7">
@@ -423,6 +444,7 @@
         <image name="Back" width="25" height="25"/>
         <image name="Forward" width="25" height="25"/>
         <image name="Menu" width="33" height="33"/>
+        <image name="Random" width="34" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eMt-LW-jxb"/>

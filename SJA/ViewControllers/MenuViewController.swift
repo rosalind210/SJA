@@ -51,13 +51,6 @@ extension MenuViewController: UITableViewDataSource {
         let row = indexPath.row
 
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        
-        if viewName == "View Controller"{
-            viewName = "Topic"
-            var source = self.parentViewController as! ArticleViewController
-            source.menuContainer.hidden = true
-            viewName = "Topic"
-        }
 
     }
     

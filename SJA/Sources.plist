@@ -81,10 +81,6 @@
 	</dict>
 	<key>Feminism</key>
 	<dict>
-		<key>Advocate</key>
-		<array>
-			<string>http://advocate.com/women/feed/</string>
-		</array>
 		<key>Black Girl Dangerous</key>
 		<array>
 			<string>http://blackgirldangerous.org/category/feminism/feed/</string>
@@ -179,12 +175,6 @@
 	</dict>
 	<key>Spectrum</key>
 	<dict>
-		<key>Advocate</key>
-		<array>
-			<string>http://advocate.com/bisexuality/feed/</string>
-			<string>http://advocate.com/transgender/feed/</string>
-			<string>http://advocate.com/pride/feed/</string>
-		</array>
 		<key>Black Girl Dangerous</key>
 		<array>
 			<string>http://blackgirldangerous.org/category/transgender/feed/</string>

@@ -17,34 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        //LOAD RANDOM ARTICLE
-        //read through sources dictionary
-        var sourcesDict: NSDictionary?
-        if let path = NSBundle.mainBundle().pathForResource("Sources", ofType: "plist") {
-            sourcesDict = NSDictionary(contentsOfFile: path)
-        }
-        
-        if let dict = sourcesDict {
-            //get topic
-            let topicArray = dict.allKeys as! [String]
-            let numForTopic = Int(arc4random_uniform(UInt32(topicArray.count))) //get random number between 0 and the number of keys
-            let topic = topicArray[numForTopic]
-            let topicDict = dict[topic] as! NSDictionary //get the topic from the array
-            
-            //get website
-            let webArray = topicDict.allKeys as! [String]
-            let numForWeb = Int(arc4random_uniform(UInt32(webArray.count)))
-            let website = webArray[numForWeb]
-            
-            //get feed
-            let feeds = topicDict[website] as! [String]
-            let randomFeed = Int(arc4random_uniform(UInt32(feeds.count)))
-            let feed = feeds[randomFeed]
-            let feedUrls = FeedHelper(givenURL: feed)
-            //get article from feed
-            let randomArticle = Int(arc4random_uniform(UInt32(feedUrls.feedItems.count)))
-            url = feedUrls.feedItems[randomArticle].link
-        }
+        url = randomArticle()
         
         // Change status bar to white
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
@@ -88,3 +61,42 @@ func backgroundThread(delay: Double = 0.0, background: (() -> Void)? = nil, comp
         }
     }
 }
+
+//MARK: - Global Random Article
+
+/* load a random article */
+func randomArticle() -> String {
+    var url: String?
+    
+    //read through sources dictionary
+    var sourcesDict: NSDictionary?
+    if let path = NSBundle.mainBundle().pathForResource("Sources", ofType: "plist") {
+        sourcesDict = NSDictionary(contentsOfFile: path)
+    }
+    
+    if let dict = sourcesDict {
+        //get topic
+        let topicArray = dict.allKeys as! [String]
+        let numForTopic = Int(arc4random_uniform(UInt32(topicArray.count))) //get random number between 0 and the number of keys
+        let topic = topicArray[numForTopic]
+        let topicDict = dict[topic] as! NSDictionary //get the topic from the array
+        
+        //get website
+        let webArray = topicDict.allKeys as! [String]
+        let numForWeb = Int(arc4random_uniform(UInt32(webArray.count)))
+        let website = webArray[numForWeb]
+        
+        //get feed
+        let feeds = topicDict[website] as! [String]
+        let randomFeed = Int(arc4random_uniform(UInt32(feeds.count)))
+        let feed = feeds[randomFeed]
+        let feedUrls = FeedHelper(givenURL: feed)
+        //get article from feed
+        let randomArticle = Int(arc4random_uniform(UInt32(feedUrls.feedItems.count)))
+        url = feedUrls.feedItems[randomArticle].link
+    }
+    return url!
+}
+
+
+

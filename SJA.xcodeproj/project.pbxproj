@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6314916E1B56CD1D004F88F0 /* SJA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6314916E1B56CD1D004F88F0 /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631491721B56CD1D004F88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631491731B56CD1D004F88F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631491781B56CD1D004F88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		6314916F1B56CD1D004F88F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6314916E1B56CD1D004F88F0 /* SJA.app */,
+				6314916E1B56CD1D004F88F0 /* Voices.app */,
 				631491831B56CD1D004F88F0 /* SJATests.xctest */,
 			);
 			name = Products;
@@ -241,7 +241,7 @@
 			);
 			name = SJA;
 			productName = SJA;
-			productReference = 6314916E1B56CD1D004F88F0 /* SJA.app */;
+			productReference = 6314916E1B56CD1D004F88F0 /* Voices.app */;
 			productType = "com.apple.product-type.application";
 		};
 		631491821B56CD1D004F88F0 /* SJATests */ = {
@@ -476,7 +476,7 @@
 				INFOPLIST_FILE = SJA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Voices;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJA/SJA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,7 +492,7 @@
 				INFOPLIST_FILE = SJA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Voices;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJA/SJA-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

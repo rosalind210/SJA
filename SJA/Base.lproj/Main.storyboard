@@ -9,7 +9,7 @@
         <!--Article View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -133,7 +133,7 @@
         <!--Menu-->
         <scene sceneID="Xmp-Tm-Io1">
             <objects>
-                <viewController title="Menu" automaticallyAdjustsScrollViewInsets="NO" id="WJC-NP-En0" customClass="MenuViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu" automaticallyAdjustsScrollViewInsets="NO" id="WJC-NP-En0" customClass="MenuViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YLe-f1-I0N"/>
                         <viewControllerLayoutGuide type="bottom" id="g53-aO-1Qr"/>
@@ -147,7 +147,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.46274509803921571" green="0.27058823529411763" blue="0.54117647058823526" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" id="TAU-qe-Y4b" customClass="TopicTableViewCell" customModule="SJA" customModuleProvider="target">
+                                    <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" id="TAU-qe-Y4b" customClass="TopicTableViewCell" customModule="Voices" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TAU-qe-Y4b" id="cVZ-Vi-hDW">
@@ -193,7 +193,7 @@
         <!--Article List View Controller-->
         <scene sceneID="3Xv-bX-X7G">
             <objects>
-                <viewController id="Zif-8U-Hj9" customClass="ArticleListViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zif-8U-Hj9" customClass="ArticleListViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Suf-Hh-YyP"/>
                         <viewControllerLayoutGuide type="bottom" id="cUO-Kt-xlE"/>
@@ -217,7 +217,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArticleNameCell" rowHeight="75" id="IST-ef-ddh" customClass="ArticleTableViewCell" customModule="SJA" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArticleNameCell" rowHeight="75" id="IST-ef-ddh" customClass="ArticleTableViewCell" customModule="Voices" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IST-ef-ddh" id="t2U-fH-bih">
@@ -280,7 +280,7 @@
         <!--Topic View Controller-->
         <scene sceneID="yiC-f0-tZ0">
             <objects>
-                <viewController id="bKP-3M-NxT" customClass="TopicViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bKP-3M-NxT" customClass="TopicViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AVt-5b-1ta"/>
                         <viewControllerLayoutGuide type="bottom" id="W6C-qa-Af7"/>
@@ -293,7 +293,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WebsiteNameCell" rowHeight="75" id="NJO-fL-Y2O" customClass="WebsiteTableViewCell" customModule="SJA" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WebsiteNameCell" rowHeight="75" id="NJO-fL-Y2O" customClass="WebsiteTableViewCell" customModule="Voices" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NJO-fL-Y2O" id="uzk-To-ryh">
@@ -354,7 +354,7 @@
         <!--Article View Controller-->
         <scene sceneID="gpU-m8-3ST">
             <objects>
-                <viewController id="2HC-1A-yd5" customClass="ArticleViewController" customModule="SJA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2HC-1A-yd5" customClass="ArticleViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X9V-9K-Swd"/>
                         <viewControllerLayoutGuide type="bottom" id="yHV-BT-YAT"/>

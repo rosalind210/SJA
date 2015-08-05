@@ -11,7 +11,6 @@
 		631491791B56CD1D004F88F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631491771B56CD1D004F88F0 /* Main.storyboard */; };
 		6314917B1B56CD1D004F88F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314917A1B56CD1D004F88F0 /* Images.xcassets */; };
 		6314917E1B56CD1D004F88F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6314917C1B56CD1D004F88F0 /* LaunchScreen.xib */; };
-		6314918A1B56CD1D004F88F0 /* SJATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631491891B56CD1D004F88F0 /* SJATests.swift */; };
 		6314919B1B56FA24004F88F0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314919A1B56FA24004F88F0 /* MenuViewController.swift */; };
 		6314919F1B56FC76004F88F0 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314919E1B56FC76004F88F0 /* TopicTableViewCell.swift */; };
 		631491A11B5701B9004F88F0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631491A01B5701B9004F88F0 /* TopicViewController.swift */; };
@@ -31,16 +30,6 @@
 		63B68FEB1B570F2C00039F8C /* MenuButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B68FEA1B570F2C00039F8C /* MenuButtonHelper.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		631491841B56CD1D004F88F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 631491661B56CD1D004F88F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6314916D1B56CD1D004F88F0;
-			remoteInfo = SJA;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		6314916E1B56CD1D004F88F0 /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631491721B56CD1D004F88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +37,6 @@
 		631491781B56CD1D004F88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6314917A1B56CD1D004F88F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6314917D1B56CD1D004F88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		631491831B56CD1D004F88F0 /* SJATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		631491881B56CD1D004F88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631491891B56CD1D004F88F0 /* SJATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJATests.swift; sourceTree = "<group>"; };
 		6314919A1B56FA24004F88F0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -86,13 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		631491801B56CD1D004F88F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				6314916E1B56CD1D004F88F0 /* Voices.app */,
-				631491831B56CD1D004F88F0 /* SJATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,24 +224,6 @@
 			productReference = 6314916E1B56CD1D004F88F0 /* Voices.app */;
 			productType = "com.apple.product-type.application";
 		};
-		631491821B56CD1D004F88F0 /* SJATests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 631491901B56CD1D004F88F0 /* Build configuration list for PBXNativeTarget "SJATests" */;
-			buildPhases = (
-				6314917F1B56CD1D004F88F0 /* Sources */,
-				631491801B56CD1D004F88F0 /* Frameworks */,
-				631491811B56CD1D004F88F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				631491851B56CD1D004F88F0 /* PBXTargetDependency */,
-			);
-			name = SJATests;
-			productName = SJATests;
-			productReference = 631491831B56CD1D004F88F0 /* SJATests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,10 +236,6 @@
 					6314916D1B56CD1D004F88F0 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = N548N5REBW;
-					};
-					631491821B56CD1D004F88F0 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 6314916D1B56CD1D004F88F0;
 					};
 				};
 			};
@@ -295,7 +253,6 @@
 			projectRoot = "";
 			targets = (
 				6314916D1B56CD1D004F88F0 /* SJA */,
-				631491821B56CD1D004F88F0 /* SJATests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +266,6 @@
 				6314917E1B56CD1D004F88F0 /* LaunchScreen.xib in Resources */,
 				6314917B1B56CD1D004F88F0 /* Images.xcassets in Resources */,
 				6370E93D1B5DA96100AD7941 /* Sources.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		631491811B56CD1D004F88F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,23 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6314917F1B56CD1D004F88F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6314918A1B56CD1D004F88F0 /* SJATests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		631491851B56CD1D004F88F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6314916D1B56CD1D004F88F0 /* SJA */;
-			targetProxy = 631491841B56CD1D004F88F0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		631491771B56CD1D004F88F0 /* Main.storyboard */ = {
@@ -498,40 +432,6 @@
 			};
 			name = Release;
 		};
-		631491911B56CD1D004F88F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SJATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SJA.app/SJA";
-			};
-			name = Debug;
-		};
-		631491921B56CD1D004F88F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SJATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SJA.app/SJA";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,15 +449,6 @@
 			buildConfigurations = (
 				6314918E1B56CD1D004F88F0 /* Debug */,
 				6314918F1B56CD1D004F88F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		631491901B56CD1D004F88F0 /* Build configuration list for PBXNativeTarget "SJATests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				631491911B56CD1D004F88F0 /* Debug */,
-				631491921B56CD1D004F88F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

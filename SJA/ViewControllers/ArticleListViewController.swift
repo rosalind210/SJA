@@ -61,6 +61,7 @@ class ArticleListViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         blurEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight)) as UIVisualEffectView
         blurEffect.frame = self.view.bounds
         self.view.insertSubview(blurEffect, aboveSubview: articleListTableView)

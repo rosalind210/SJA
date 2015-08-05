@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "631491821B56CD1D004F88F0"
-               BuildableName = "SJATests.xctest"
+               BuildableName = "VoicesTests.xctest"
                BlueprintName = "SJATests"
                ReferencedContainer = "container:SJA.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "631491821B56CD1D004F88F0"
-               BuildableName = "SJATests.xctest"
+               BuildableName = "VoicesTests.xctest"
                BlueprintName = "SJATests"
                ReferencedContainer = "container:SJA.xcodeproj">
             </BuildableReference>

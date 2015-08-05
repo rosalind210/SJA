@@ -90,7 +90,7 @@ class ArticleViewController: UIViewController {
         }
 
     }
-    
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         webView.removeObserver(self, forKeyPath: "loading")
@@ -142,20 +142,31 @@ class ArticleViewController: UIViewController {
     // MARK: - Toolbar Actions
     
     @IBAction func back(sender:UIBarButtonItem) {
-        println("The back button was pressed")
         webView.goBack()
     }
     
     @IBAction func forward(sender:UIBarButtonItem) {
-        println("the forward button was pressed")
         webView.goForward()
     }
     
     @IBAction func reload(sender:UIBarButtonItem) {
-        println("the refresh was pressed")
         let request = NSURLRequest(URL: webView.URL!)
         webView.loadRequest(request)
     }
+    
+    @IBAction func back2(sender: AnyObject) {
+        webView.goBack()
+    }
+    
+    @IBAction func forward2(sender: AnyObject) {
+        webView.goForward()
+    }
+    
+    @IBAction func refresh2(sender: AnyObject) {
+        let request = NSURLRequest(URL: webView.URL!)
+        webView.loadRequest(request)
+    }
+    
     
     //MARK: -random button
     

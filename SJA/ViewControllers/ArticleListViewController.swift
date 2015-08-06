@@ -31,6 +31,12 @@ class ArticleListViewController: UIViewController {
         articleListTableView.hidden = true
         activityIndicator.startAnimating()
         self.title = chosenWebsite
+//        
+//        if UITableView.instancesRespondToSelector("setLayoutMargins:") {
+//            UITableView.appearance().layoutMargins = UIEdgeInsetsZero
+//            UITableViewCell.appearance().layoutMargins = UIEdgeInsetsZero
+//            UITableViewCell.appearance().preservesSuperviewLayoutMargins = false
+//        }
         
         //read through sources dictionary from supporting files
         if let dict = websiteDict {

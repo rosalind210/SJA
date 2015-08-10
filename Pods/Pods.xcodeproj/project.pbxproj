@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14B8100C329928A9A22C9C9FBA8EA306 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58E497B9AB5AC18D272AF6D9C6FE4C0 /* TLYShyNavBarManager.m */; };
+		2F935DF45631DBD474B9F2923CFA2C70 /* NSObject+TLYSwizzlingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E5619119420A2D84AF9520B5596AAE01 /* NSObject+TLYSwizzlingHelpers.m */; };
+		508182D619CAD92BA071D485ED10AC67 /* UIViewController+BetterLayoutGuides.h in Headers */ = {isa = PBXBuildFile; fileRef = 7026C0F0ABE8359D2B3EBC6D834A8C1F /* UIViewController+BetterLayoutGuides.h */; };
+		7839B845ED9824365928805BD1D199FF /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE35326011F4478CDD7179F603E3E9CF /* TLYShyViewController.m */; };
+		A8F972FAE6B35C1C1E2AEE84077D3532 /* TLYShyNavBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509D0BF95B937EACD6EEF21250A0C45 /* TLYShyNavBar-dummy.m */; };
+		B374CFB9D67176F6415EF1C369EF9980 /* Pods-SJA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F03DCE77A2575E51A15DEC9E2176D9 /* Pods-SJA-dummy.m */; };
+		BCCADDD2204C51F057339E4CC676D573 /* TLYShyNavBarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E46711823A583AB9A231D9B29F5517F /* TLYShyNavBarManager.h */; };
+		CAF29A24F04067586761EC0A57F9E53C /* NSObject+TLYSwizzlingHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FBC24109B475A4A35E85D0BFBAB0A58 /* NSObject+TLYSwizzlingHelpers.h */; };
+		CD6C618965801385037EF37D1BF69D22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471D5D3EE5FCBA6074B22AFBC82A7A91 /* Foundation.framework */; };
+		E6F4D2162E1945F7FFC1C5837D2113E3 /* TLYShyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5E3BFE63C937E2A2EBA552BDCE7E3C /* TLYShyViewController.h */; };
+		EF6404270335B3BA8F74732B1413998F /* UIViewController+BetterLayoutGuides.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DB52B2EAA9C5DFCA314BDE79CFC409 /* UIViewController+BetterLayoutGuides.m */; };
+		F2685E80B46688D3B3B42365766D4557 /* TLYDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 137177FDF7257C127D5F93B9AF2F421D /* TLYDelegateProxy.h */; };
+		F2CF4A9DD212427C0E6381389FB60003 /* TLYDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C0A88C736E480C832800BFF92DCE /* TLYDelegateProxy.m */; };
+		F3319D4827BFFD6C2B688653E287CC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471D5D3EE5FCBA6074B22AFBC82A7A91 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2648E0A5F1584F5CEFAFE9C23C1DB124 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C5ABB81789943EADC6262A86CA0F1EC;
+			remoteInfo = TLYShyNavBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0291C0A88C736E480C832800BFF92DCE /* TLYDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLYDelegateProxy.m; path = TLYShyNavBar/TLYDelegateProxy.m; sourceTree = "<group>"; };
+		137177FDF7257C127D5F93B9AF2F421D /* TLYDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLYDelegateProxy.h; path = TLYShyNavBar/TLYDelegateProxy.h; sourceTree = "<group>"; };
+		1A455593FB84CB2B9690CB5612A1638A /* TLYShyNavBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLYShyNavBar.xcconfig; sourceTree = "<group>"; };
+		2FBC24109B475A4A35E85D0BFBAB0A58 /* NSObject+TLYSwizzlingHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+TLYSwizzlingHelpers.h"; path = "TLYShyNavBar/Categories/NSObject+TLYSwizzlingHelpers.h"; sourceTree = "<group>"; };
+		2FE6E9C2524A28314511E706F741CB8D /* libTLYShyNavBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTLYShyNavBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D926D5C3981BB1648FC98DEECE525D /* libPods-SJA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		471D5D3EE5FCBA6074B22AFBC82A7A91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E46711823A583AB9A231D9B29F5517F /* TLYShyNavBarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLYShyNavBarManager.h; path = TLYShyNavBar/TLYShyNavBarManager.h; sourceTree = "<group>"; };
+		63DABED6CE5C919FC7281E432706103D /* TLYShyNavBar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TLYShyNavBar-Private.xcconfig"; sourceTree = "<group>"; };
+		6509D0BF95B937EACD6EEF21250A0C45 /* TLYShyNavBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLYShyNavBar-dummy.m"; sourceTree = "<group>"; };
+		6A0AB847AF53629924816C37F4EBDD47 /* Pods-SJA-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SJA-resources.sh"; sourceTree = "<group>"; };
+		7026C0F0ABE8359D2B3EBC6D834A8C1F /* UIViewController+BetterLayoutGuides.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BetterLayoutGuides.h"; path = "TLYShyNavBar/Categories/UIViewController+BetterLayoutGuides.h"; sourceTree = "<group>"; };
+		72F03DCE77A2575E51A15DEC9E2176D9 /* Pods-SJA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJA-dummy.m"; sourceTree = "<group>"; };
+		7932EF3C768987F32F89CA5E81B08D06 /* Pods-SJA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJA-acknowledgements.markdown"; sourceTree = "<group>"; };
+		87A533BA0293348CA07EB1E9D0B08362 /* Pods-SJA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJA-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BE02050283F9B43CCDE6A70052DF2738 /* Pods-SJA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJA.release.xcconfig"; sourceTree = "<group>"; };
+		BF5E3BFE63C937E2A2EBA552BDCE7E3C /* TLYShyViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLYShyViewController.h; path = TLYShyNavBar/TLYShyViewController.h; sourceTree = "<group>"; };
+		C58E497B9AB5AC18D272AF6D9C6FE4C0 /* TLYShyNavBarManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLYShyNavBarManager.m; path = TLYShyNavBar/TLYShyNavBarManager.m; sourceTree = "<group>"; };
+		DE35326011F4478CDD7179F603E3E9CF /* TLYShyViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLYShyViewController.m; path = TLYShyNavBar/TLYShyViewController.m; sourceTree = "<group>"; };
+		E1DB52B2EAA9C5DFCA314BDE79CFC409 /* UIViewController+BetterLayoutGuides.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BetterLayoutGuides.m"; path = "TLYShyNavBar/Categories/UIViewController+BetterLayoutGuides.m"; sourceTree = "<group>"; };
+		E5619119420A2D84AF9520B5596AAE01 /* NSObject+TLYSwizzlingHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+TLYSwizzlingHelpers.m"; path = "TLYShyNavBar/Categories/NSObject+TLYSwizzlingHelpers.m"; sourceTree = "<group>"; };
+		FE8772C42BB4089821C240D8529B75AB /* Pods-SJA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJA.debug.xcconfig"; sourceTree = "<group>"; };
+		FF32F5644E115B434FB5471A14798579 /* TLYShyNavBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLYShyNavBar-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47D5DAA9C2BFD429332675BEE004FF9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3319D4827BFFD6C2B688653E287CC59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D5FD57EA3A0E7DDA4032C2F4D918DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6C618965801385037EF37D1BF69D22 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		035FD6FEEAEE70523E1360CE2299FF2E /* Pods-SJA */ = {
+			isa = PBXGroup;
+			children = (
+				7932EF3C768987F32F89CA5E81B08D06 /* Pods-SJA-acknowledgements.markdown */,
+				87A533BA0293348CA07EB1E9D0B08362 /* Pods-SJA-acknowledgements.plist */,
+				72F03DCE77A2575E51A15DEC9E2176D9 /* Pods-SJA-dummy.m */,
+				6A0AB847AF53629924816C37F4EBDD47 /* Pods-SJA-resources.sh */,
+				FE8772C42BB4089821C240D8529B75AB /* Pods-SJA.debug.xcconfig */,
+				BE02050283F9B43CCDE6A70052DF2738 /* Pods-SJA.release.xcconfig */,
+			);
+			name = "Pods-SJA";
+			path = "Target Support Files/Pods-SJA";
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				471D5D3EE5FCBA6074B22AFBC82A7A91 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		65EB707010E79078753D1CBEEDC52D57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1AA8A38498006DCD8A41BD5759C4B1E /* TLYShyNavBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		701E57D82F0D08604999E33F5B63A084 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A455593FB84CB2B9690CB5612A1638A /* TLYShyNavBar.xcconfig */,
+				63DABED6CE5C919FC7281E432706103D /* TLYShyNavBar-Private.xcconfig */,
+				6509D0BF95B937EACD6EEF21250A0C45 /* TLYShyNavBar-dummy.m */,
+				FF32F5644E115B434FB5471A14798579 /* TLYShyNavBar-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TLYShyNavBar";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				65EB707010E79078753D1CBEEDC52D57 /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				A88FCC8D1DCE80807A2AEA4C5D6D6F32 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A88FCC8D1DCE80807A2AEA4C5D6D6F32 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				035FD6FEEAEE70523E1360CE2299FF2E /* Pods-SJA */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1AA8A38498006DCD8A41BD5759C4B1E /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				2FBC24109B475A4A35E85D0BFBAB0A58 /* NSObject+TLYSwizzlingHelpers.h */,
+				E5619119420A2D84AF9520B5596AAE01 /* NSObject+TLYSwizzlingHelpers.m */,
+				137177FDF7257C127D5F93B9AF2F421D /* TLYDelegateProxy.h */,
+				0291C0A88C736E480C832800BFF92DCE /* TLYDelegateProxy.m */,
+				4E46711823A583AB9A231D9B29F5517F /* TLYShyNavBarManager.h */,
+				C58E497B9AB5AC18D272AF6D9C6FE4C0 /* TLYShyNavBarManager.m */,
+				BF5E3BFE63C937E2A2EBA552BDCE7E3C /* TLYShyViewController.h */,
+				DE35326011F4478CDD7179F603E3E9CF /* TLYShyViewController.m */,
+				7026C0F0ABE8359D2B3EBC6D834A8C1F /* UIViewController+BetterLayoutGuides.h */,
+				E1DB52B2EAA9C5DFCA314BDE79CFC409 /* UIViewController+BetterLayoutGuides.m */,
+				701E57D82F0D08604999E33F5B63A084 /* Support Files */,
+			);
+			path = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44D926D5C3981BB1648FC98DEECE525D /* libPods-SJA.a */,
+				2FE6E9C2524A28314511E706F741CB8D /* libTLYShyNavBar.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		67F4975931AB3CBD1237C7498D75E9FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF29A24F04067586761EC0A57F9E53C /* NSObject+TLYSwizzlingHelpers.h in Headers */,
+				F2685E80B46688D3B3B42365766D4557 /* TLYDelegateProxy.h in Headers */,
+				BCCADDD2204C51F057339E4CC676D573 /* TLYShyNavBarManager.h in Headers */,
+				E6F4D2162E1945F7FFC1C5837D2113E3 /* TLYShyViewController.h in Headers */,
+				508182D619CAD92BA071D485ED10AC67 /* UIViewController+BetterLayoutGuides.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C5ABB81789943EADC6262A86CA0F1EC /* TLYShyNavBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DBFEBEBB359F355FF4961CDDAF39C87 /* Build configuration list for PBXNativeTarget "TLYShyNavBar" */;
+			buildPhases = (
+				7FAD2C54BF750D0150D6E5D19F4FEAE9 /* Sources */,
+				A1D5FD57EA3A0E7DDA4032C2F4D918DD /* Frameworks */,
+				67F4975931AB3CBD1237C7498D75E9FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLYShyNavBar;
+			productName = TLYShyNavBar;
+			productReference = 2FE6E9C2524A28314511E706F741CB8D /* libTLYShyNavBar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		849F6D87EA5EF2910A32ED12F41C7704 /* Pods-SJA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9723968E502BC76A862CCF629830BEAA /* Build configuration list for PBXNativeTarget "Pods-SJA" */;
+			buildPhases = (
+				D729C98B1114077B3A7B47816F1C9595 /* Sources */,
+				47D5DAA9C2BFD429332675BEE004FF9C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F8222240237B2EBC207CCB7CFD0AFBE /* PBXTargetDependency */,
+			);
+			name = "Pods-SJA";
+			productName = "Pods-SJA";
+			productReference = 44D926D5C3981BB1648FC98DEECE525D /* libPods-SJA.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849F6D87EA5EF2910A32ED12F41C7704 /* Pods-SJA */,
+				1C5ABB81789943EADC6262A86CA0F1EC /* TLYShyNavBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FAD2C54BF750D0150D6E5D19F4FEAE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F935DF45631DBD474B9F2923CFA2C70 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
+				F2CF4A9DD212427C0E6381389FB60003 /* TLYDelegateProxy.m in Sources */,
+				A8F972FAE6B35C1C1E2AEE84077D3532 /* TLYShyNavBar-dummy.m in Sources */,
+				14B8100C329928A9A22C9C9FBA8EA306 /* TLYShyNavBarManager.m in Sources */,
+				7839B845ED9824365928805BD1D199FF /* TLYShyViewController.m in Sources */,
+				EF6404270335B3BA8F74732B1413998F /* UIViewController+BetterLayoutGuides.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D729C98B1114077B3A7B47816F1C9595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B374CFB9D67176F6415EF1C369EF9980 /* Pods-SJA-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F8222240237B2EBC207CCB7CFD0AFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TLYShyNavBar;
+			target = 1C5ABB81789943EADC6262A86CA0F1EC /* TLYShyNavBar */;
+			targetProxy = 2648E0A5F1584F5CEFAFE9C23C1DB124 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		045838457A78AF5AF15A016060961F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8772C42BB4089821C240D8529B75AB /* Pods-SJA.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		070D282D23EC1AA8A0E6CE6A54D3F515 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE02050283F9B43CCDE6A70052DF2738 /* Pods-SJA.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E264018F4EF9D6DEE6BBEF007C56C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DABED6CE5C919FC7281E432706103D /* TLYShyNavBar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TLYShyNavBar/TLYShyNavBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5F5261EB8D207CDB9878818116B274F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DABED6CE5C919FC7281E432706103D /* TLYShyNavBar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TLYShyNavBar/TLYShyNavBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DBFEBEBB359F355FF4961CDDAF39C87 /* Build configuration list for PBXNativeTarget "TLYShyNavBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E264018F4EF9D6DEE6BBEF007C56C35 /* Debug */,
+				5F5261EB8D207CDB9878818116B274F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9723968E502BC76A862CCF629830BEAA /* Build configuration list for PBXNativeTarget "Pods-SJA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045838457A78AF5AF15A016060961F9A /* Debug */,
+				070D282D23EC1AA8A0E6CE6A54D3F515 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

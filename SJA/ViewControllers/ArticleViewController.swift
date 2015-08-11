@@ -14,6 +14,7 @@ class ArticleViewController: UIViewController {
     var chosenArticle: String?
     var articleTitle: String?
     var randomURL: String?
+    var url = String()
     
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -60,13 +61,14 @@ class ArticleViewController: UIViewController {
         
         // creates and loads article link
         if chosenArticle == nil { //if this is the main screen
-            randomURL = randomArticle()
-            let url = NSURL(string: randomURL!)
-            let requestObj = NSURLRequest(URL: url!)
+            url = randomArticle()
+            let loadURL = NSURL(string: url)
+            let requestObj = NSURLRequest(URL: loadURL!)
             webView.loadRequest(requestObj)
         } else { //if this is coming from the tvc
-            let url = NSURL(string: chosenArticle!)
-            let requestObj = NSURLRequest(URL: url!)
+            url = chosenArticle!
+            let loadURL = NSURL(string: url)
+            let requestObj = NSURLRequest(URL: loadURL!)
             webView.loadRequest(requestObj)
         }
     }
@@ -83,9 +85,9 @@ class ArticleViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        
         //TLYShyNavBar
         self.shyNavBarManager.scrollView = webView.scrollView
-        
         
         //buttons are definitely not enabled
         backButton.enabled = false
@@ -181,20 +183,53 @@ class ArticleViewController: UIViewController {
     //MARK: -random button
     
     @IBAction func getRandomArticle() {
-        var newURL = randomArticle()
-        if newURL != "" {
-            let url = NSURL(string: newURL)
-            let requestObj = NSURLRequest(URL: url!)
+        url = randomArticle()
+        if url != "" {
+            let loadURL = NSURL(string: url)
+            let requestObj = NSURLRequest(URL: loadURL!)
             webView.loadRequest(requestObj)
         } else {
-            newURL = randomArticle()
-            let url = NSURL(string: newURL)
-            let requestObj = NSURLRequest(URL: url!)
+            url = randomArticle()
+            let loadURL = NSURL(string: url)
+            let requestObj = NSURLRequest(URL: loadURL!)
             webView.loadRequest(requestObj)
         }
     }
     
-
+    //MARK: -Share
+    
+    @IBAction func randomShareURL(sender: AnyObject) {
+        let textToShare = "Check out this article I got from 'Voices: Social Justice Articles'! \n"
+        
+        if let articleLink = NSURL(string: url)
+        {
+            let objectsToShare = [textToShare, articleLink]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Phone {
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            } else {
+                var popOverController = UIPopoverController(contentViewController: activityVC)
+                popOverController.presentPopoverFromRect(CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0), inView: self.view, permittedArrowDirections: nil, animated: true)
+            }
+        }
+    }
+    
+    @IBAction func chosenShareURL(sender: AnyObject) {
+        let textToShare = "Check out this article I got from 'Voices: Social Justice Articles'! \n"
+        
+        if let articleLink = NSURL(string: url)
+        {
+            let objectsToShare = [textToShare, articleLink]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Phone {
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            } else {
+                var popOverController = UIPopoverController(contentViewController: activityVC)
+                popOverController.presentPopoverFromRect(CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0), inView: self.view, permittedArrowDirections: nil, animated: true)
+            }
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -205,5 +240,11 @@ class ArticleViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
-    
+}
+
+extension WKWebView {
+    func invalidateVisibleRect() {
+        let contentOffset = scrollView.contentOffset
+        scrollView.setContentOffset(CGPoint(x: contentOffset.x, y: contentOffset.y + 1), animated: true)
+    }
 }

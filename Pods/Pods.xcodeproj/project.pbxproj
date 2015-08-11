@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2648E0A5F1584F5CEFAFE9C23C1DB124 /* PBXContainerItemProxy */ = {
+		DF48A07A9E4863C71F0EFCFE17444B43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -221,7 +221,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6F8222240237B2EBC207CCB7CFD0AFBE /* PBXTargetDependency */,
+				4B62EF9A1404BD585097792CE1BB9AAB /* PBXTargetDependency */,
 			);
 			name = "Pods-SJA";
 			productName = "Pods-SJA";
@@ -280,11 +280,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6F8222240237B2EBC207CCB7CFD0AFBE /* PBXTargetDependency */ = {
+		4B62EF9A1404BD585097792CE1BB9AAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TLYShyNavBar;
 			target = 1C5ABB81789943EADC6262A86CA0F1EC /* TLYShyNavBar */;
-			targetProxy = 2648E0A5F1584F5CEFAFE9C23C1DB124 /* PBXContainerItemProxy */;
+			targetProxy = DF48A07A9E4863C71F0EFCFE17444B43 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

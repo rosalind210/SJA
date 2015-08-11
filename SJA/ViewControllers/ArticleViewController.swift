@@ -38,6 +38,9 @@ class ArticleViewController: UIViewController {
         
         webView = WKWebView(frame: CGRectZero)
         
+        // hides navigation bar when scrolling
+        self.shyNavBarManager.scrollView = webView.scrollView
+        
         if articleTitle != nil {
             self.title = articleTitle
         } else {
@@ -77,6 +80,7 @@ class ArticleViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         // hides navigation bar when scrolling
+//        navigationController?.hidesBarsOnSwipe = true
         self.shyNavBarManager.scrollView = webView.scrollView
         
         //buttons are definitely not enabled

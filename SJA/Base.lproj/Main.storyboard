@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-BJ-EPz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="4"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="GuQ-dd-yMF"/>
                                 </constraints>
@@ -214,7 +214,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
                                 <rect key="frame" x="282" y="261" width="37" height="37"/>
                                 <color key="color" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -265,13 +265,13 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="height" secondItem="KNt-XT-550" secondAttribute="height" id="0Vt-ye-jCO"/>
-                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="top" secondItem="Suf-Hh-YyP" secondAttribute="bottom" constant="261" id="Ehl-zy-swT"/>
-                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="centerX" secondItem="DfA-EL-zD4" secondAttribute="centerX" id="L15-9V-kK5"/>
+                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="centerX" secondItem="DfA-EL-zD4" secondAttribute="centerX" id="OH9-oe-elN"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" multiplier="1:2" id="bEg-je-Jle"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="top" secondItem="KNt-XT-550" secondAttribute="topMargin" id="f4P-oP-IK7"/>
                             <constraint firstAttribute="trailing" secondItem="W6V-cE-Pt7" secondAttribute="trailing" id="pt0-N9-YMD"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="leading" secondItem="KNt-XT-550" secondAttribute="leading" id="qgW-JM-CP7"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="bottom" secondItem="cUO-Kt-xlE" secondAttribute="top" id="tB7-68-js2"/>
+                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="top" secondItem="Suf-Hh-YyP" secondAttribute="bottom" constant="261" id="ugV-Ls-V0b"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" id="vj0-dJ-v1A"/>
                             <constraint firstItem="cUO-Kt-xlE" firstAttribute="top" secondItem="W6V-cE-Pt7" secondAttribute="bottom" id="x2N-fi-zhw"/>
                         </constraints>

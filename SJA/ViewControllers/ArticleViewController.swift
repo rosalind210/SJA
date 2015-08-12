@@ -137,6 +137,8 @@ class ArticleViewController: UIViewController {
     // resets progressView after each request
     func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
         progressView.setProgress(0.0, animated: false)
+        
+        
     }
     
     // MARK: - Navigation Controller for opening screen
@@ -198,6 +200,7 @@ class ArticleViewController: UIViewController {
     
     //MARK: -Share
     
+    // The share button for the first view presented
     @IBAction func randomShareURL(sender: AnyObject) {
         let textToShare = "Check out this article I got from 'Voices: Social Justice Articles'! \n"
         
@@ -214,6 +217,7 @@ class ArticleViewController: UIViewController {
         }
     }
     
+    //share button for navigated to article
     @IBAction func chosenShareURL(sender: AnyObject) {
         let textToShare = "Check out this article I got from 'Voices: Social Justice Articles'! \n"
         

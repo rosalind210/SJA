@@ -22,6 +22,8 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var progressView: UIProgressView!
     
+    var top : NSLayoutConstraint!
+    
     var blurEffect = UIVisualEffectView()
     
     //FOR RANDOM ARTICLE
@@ -45,6 +47,8 @@ class ArticleViewController: UIViewController {
             self.title = "Random Article"
         }
         
+        webView.scrollView.delegate = self
+        
         // adds webview to main view below the progress view
         view.insertSubview(webView, belowSubview: progressView)
         
@@ -53,7 +57,7 @@ class ArticleViewController: UIViewController {
         
         let width = NSLayoutConstraint(item: webView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 0) // define width equal to superview
         let leading = NSLayoutConstraint(item: webView, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .Leading, multiplier: 1, constant: 0)
-        let top = NSLayoutConstraint(item: webView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 0)
+        top = NSLayoutConstraint(item: webView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 0)
         let trailing = NSLayoutConstraint(item: webView, attribute: .Trailing, relatedBy: .Equal, toItem: view, attribute: .Trailing, multiplier: 1, constant: 0)
         let bottom = NSLayoutConstraint(item: webView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1, constant: -44)
         
@@ -88,6 +92,8 @@ class ArticleViewController: UIViewController {
         
         //TLYShyNavBar
         self.shyNavBarManager.scrollView = webView.scrollView
+//        self.shyNavBarManager.extensionView = webView
+        self.shyNavBarManager.stickyExtensionView = true
         
         //buttons are definitely not enabled
         backButton.enabled = false
@@ -107,7 +113,7 @@ class ArticleViewController: UIViewController {
         super.viewWillDisappear(animated)
         webView.removeObserver(self, forKeyPath: "loading")
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
-        progressView.removeFromSuperview()
+        progressView?.removeFromSuperview()
         
         //hide the menu and blur after pressing topic
         if menuContainer != nil {
@@ -250,5 +256,13 @@ extension WKWebView {
     func invalidateVisibleRect() {
         let contentOffset = scrollView.contentOffset
         scrollView.setContentOffset(CGPoint(x: contentOffset.x, y: contentOffset.y + 1), animated: true)
+    }
+}
+
+extension ArticleViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if var y = navigationController?.navigationBar.frame.origin.y {
+            top.constant = y - 24
+        }
     }
 }

@@ -92,8 +92,6 @@ class ArticleViewController: UIViewController {
         
         //TLYShyNavBar
         self.shyNavBarManager.scrollView = webView.scrollView
-//        self.shyNavBarManager.extensionView = webView
-        self.shyNavBarManager.stickyExtensionView = true
         
         //buttons are definitely not enabled
         backButton.enabled = false
@@ -135,8 +133,8 @@ class ArticleViewController: UIViewController {
         
         // updates progressView to the estimated progress
         if keyPath == "estimatedProgress" {
-            progressView.hidden = (webView.estimatedProgress == 1)
-            progressView.setProgress(Float(webView.estimatedProgress), animated: true)
+            progressView?.hidden = (webView.estimatedProgress == 1)
+            progressView?.setProgress(Float(webView.estimatedProgress), animated: true)
         }
     }
     

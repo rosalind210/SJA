@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-BJ-EPz">
-                                <rect key="frame" x="0.0" y="64" width="600" height="4"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="GuQ-dd-yMF"/>
-                                </constraints>
-                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqo-zM-vDM">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -57,6 +50,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-BJ-EPz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="GuQ-dd-yMF"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                             <containerView hidden="YES" alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0j-qi-lRM">
                                 <rect key="frame" x="300" y="64" width="300" height="536"/>
                                 <color key="backgroundColor" red="0.46274509803921571" green="0.27058823529411763" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
@@ -215,9 +215,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-8O-Pkw">
-                                <rect key="frame" x="282" y="261" width="37" height="37"/>
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
                                 <color key="color" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-cE-Pt7">
+                                <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="WJC-NP-En0" kind="embed" id="2yM-si-D3B"/>
+                                </connections>
+                            </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-EL-zD4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,25 +260,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-cE-Pt7">
-                                <rect key="frame" x="300" y="0.0" width="300" height="600"/>
-                                <color key="backgroundColor" red="0.38039215686274508" green="0.18823529411764706" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="WJC-NP-En0" kind="embed" id="2yM-si-D3B"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="height" secondItem="KNt-XT-550" secondAttribute="height" id="0Vt-ye-jCO"/>
-                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="centerX" secondItem="DfA-EL-zD4" secondAttribute="centerX" id="OH9-oe-elN"/>
+                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="centerX" secondItem="KNt-XT-550" secondAttribute="centerX" id="OGy-fL-zCT"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" multiplier="1:2" id="bEg-je-Jle"/>
                             <constraint firstItem="W6V-cE-Pt7" firstAttribute="top" secondItem="KNt-XT-550" secondAttribute="topMargin" id="f4P-oP-IK7"/>
                             <constraint firstAttribute="trailing" secondItem="W6V-cE-Pt7" secondAttribute="trailing" id="pt0-N9-YMD"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="leading" secondItem="KNt-XT-550" secondAttribute="leading" id="qgW-JM-CP7"/>
+                            <constraint firstAttribute="centerY" secondItem="ZQP-8O-Pkw" secondAttribute="centerY" id="r7W-mw-itz"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="bottom" secondItem="cUO-Kt-xlE" secondAttribute="top" id="tB7-68-js2"/>
-                            <constraint firstItem="ZQP-8O-Pkw" firstAttribute="top" secondItem="Suf-Hh-YyP" secondAttribute="bottom" constant="261" id="ugV-Ls-V0b"/>
                             <constraint firstItem="DfA-EL-zD4" firstAttribute="width" secondItem="KNt-XT-550" secondAttribute="width" id="vj0-dJ-v1A"/>
                             <constraint firstItem="cUO-Kt-xlE" firstAttribute="top" secondItem="W6V-cE-Pt7" secondAttribute="bottom" id="x2N-fi-zhw"/>
                         </constraints>
@@ -421,17 +421,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-A9-Rtn">
-                                <rect key="frame" x="-4" y="0.0" width="608" height="4"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-A9-Rtn">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="QnL-eI-UiO"/>
+                                </constraints>
                                 <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="centerX" secondItem="zEr-vd-J3Y" secondAttribute="centerX" id="92g-dZ-Dqs"/>
-                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="top" secondItem="X9V-9K-Swd" secondAttribute="bottom" id="DiK-AO-P5p"/>
-                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="leading" secondItem="d2L-dp-puj" secondAttribute="leadingMargin" constant="-20" id="YOx-Zn-YG3"/>
+                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="centerX" secondItem="zEr-vd-J3Y" secondAttribute="centerX" id="1aY-h7-wPc"/>
+                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="leading" secondItem="d2L-dp-puj" secondAttribute="leadingMargin" constant="-20" id="a2f-eM-q1m"/>
                             <constraint firstItem="yHV-BT-YAT" firstAttribute="top" secondItem="zEr-vd-J3Y" secondAttribute="bottom" id="c0z-sJ-Elu"/>
+                            <constraint firstItem="jQm-A9-Rtn" firstAttribute="top" secondItem="X9V-9K-Swd" secondAttribute="bottom" id="ruY-fl-xb8"/>
                             <constraint firstAttribute="trailing" secondItem="zEr-vd-J3Y" secondAttribute="trailing" id="t6a-EH-CFI"/>
                             <constraint firstItem="zEr-vd-J3Y" firstAttribute="leading" secondItem="d2L-dp-puj" secondAttribute="leading" id="wp6-k0-XGl"/>
                         </constraints>

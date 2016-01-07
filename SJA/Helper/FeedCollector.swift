@@ -25,9 +25,9 @@ class FeedCollector {
     
     func createFeedHelpers() {
         for i in 0...feedArray.count-1 {
-            var url = feedArray[i]
+            let url = feedArray[i]
             
-            var feed = FeedHelper(givenURL: url)
+            let feed = FeedHelper(givenURL: url)
             addFeedItems(feed)
             //println("Feed finished \(i)")
         }

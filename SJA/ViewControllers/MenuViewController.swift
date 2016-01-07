@@ -29,15 +29,15 @@ class MenuViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let table = tableView.indexPathForSelectedRow() {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: false)
+        if let table = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: false)
         }
     }
     
     // Passes the topic, and therefore the rss links, through the segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController as! TopicViewController
-        let indexPath = tableView.indexPathForSelectedRow()
+        let indexPath = tableView.indexPathForSelectedRow
         let topic = topics[indexPath!.row]
         destinationVC.currentTopic = topic
     }

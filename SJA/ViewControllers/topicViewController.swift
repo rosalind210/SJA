@@ -42,7 +42,7 @@ class TopicViewController: UIViewController {
         if let dict = sourcesDict {
             websites = dict[currentTopic!] as? NSDictionary
             websiteArray = websites!.allKeys as! [String]
-            websiteArray.sort { $0 < $1 }
+            websiteArray.sortInPlace { $0 < $1 }
         }
         
         websiteListTableView.dataSource = self

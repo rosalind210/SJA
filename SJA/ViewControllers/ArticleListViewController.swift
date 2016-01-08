@@ -39,7 +39,7 @@ class ArticleListViewController: UIViewController {
 //        }
         
         //read through sources dictionary from supporting files
-        if let dict = websiteDict {
+        if let _ = websiteDict {
             feedArray = websiteDict![chosenWebsite!] as! [String]
             feedCollector = FeedCollector(listOfURLs: feedArray)
         }

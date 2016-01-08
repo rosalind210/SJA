@@ -29,7 +29,7 @@ class MenuViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let table = tableView.indexPathForSelectedRow {
+        if let _ = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: false)
         }
     }
@@ -48,7 +48,7 @@ extension MenuViewController: UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
+        let _ = indexPath.row
 
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
 
